@@ -31,6 +31,7 @@ body{
     padding:25px;
     overflow-y:auto;
     box-shadow:4px 0 25px rgba(0,0,0,.35);
+    animation:sidebarSlide .8s ease;
 }
 
 .logo{
@@ -65,7 +66,8 @@ body{
     font-weight:500;
 }
 
-.sidebar nav a:hover{
+.sidebar nav a:hover,
+.sidebar nav a.active{
     background:linear-gradient(90deg,#2563eb,#3b82f6);
     color:#fff;
     transform:translateX(8px);
@@ -96,18 +98,20 @@ body{
     top:0;
     z-index:100;
     box-shadow:0 3px 10px rgba(0,0,0,.25);
+    animation:headerDown .8s ease;
 }
 
 .header h3{
     font-size:28px;
     font-weight:700;
-    color:white;
+    color:#fff;
 }
 
 .main{
     flex:1;
     width:100%;
     padding:30px;
+    animation:pageFade .8s ease;
 }
 
 /* ================= Bootstrap ================= */
@@ -169,17 +173,17 @@ body{
     background:#1e293b;
 }
 
-/* ================= Form ================= */
+/* ================= Forms ================= */
 
 .form-control{
     background:#1e293b;
     border:1px solid #334155;
-    color:white;
+    color:#fff;
 }
 
 .form-control:focus{
     background:#1e293b;
-    color:white;
+    color:#fff;
     border-color:#3b82f6;
     box-shadow:none;
 }
@@ -194,14 +198,14 @@ body{
     border-radius:10px;
 }
 
-/* ================= Badges ================= */
+/* ================= Badge ================= */
 
 .badge{
     font-size:13px;
     padding:8px 14px;
 }
 
-/* ================= Alerts ================= */
+/* ================= Alert ================= */
 
 .alert{
     border:none;
@@ -225,7 +229,7 @@ body{
 
 /* ================= Responsive ================= */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .layout{
     flex-direction:column;
@@ -256,64 +260,8 @@ body{
 }
 
 }
-...
 
-@media(max-width:992px){
-
-.sidebar{
-    position:relative;
-    width:100%;
-    min-width:100%;
-    height:auto;
-}
-
-.content{
-    margin-left:0;
-    width:100%;
-}
-
-.layout{
-    flex-direction:column;
-}
-
-.header{
-    padding:20px;
-}
-
-.header h3{
-    font-size:22px;
-}
-
-.main{
-    padding:20px;
-}
-
-}
-
-/* ===== Active Menu ===== */
-
-.sidebar nav a.active{
-    background:linear-gradient(90deg,#2563eb,#3b82f6);
-    color:white;
-    font-weight:600;
-    box-shadow:0 10px 20px rgba(37,99,235,.35);
-}
-
-/* ===========================
-   Mission Control Animation
-=========================== */
-
-.sidebar{
-    animation: sidebarSlide .8s ease;
-}
-
-.header{
-    animation: headerDown .8s ease;
-}
-
-.main{
-    animation: pageFade .8s ease;
-}
+/* ================= Animations ================= */
 
 @keyframes sidebarSlide{
     from{
