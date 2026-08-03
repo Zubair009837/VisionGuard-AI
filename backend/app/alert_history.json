@@ -1,0 +1,842 @@
+[
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:32:47 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:32:51 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:32:56 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:33:00 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:28 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:29 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:32 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:32 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:36 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:43 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:37:44 PM"
+    },
+    {
+        "camera": "QC TABLE 8",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.87",
+        "status": "Offline",
+        "time": "03-08-2026 04:39:52 PM"
+    },
+    {
+        "camera": "QC TABLE 17",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.86",
+        "status": "Offline",
+        "time": "03-08-2026 04:41:22 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:41:26 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:41:30 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:41:34 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:41:37 PM"
+    },
+    {
+        "camera": "QC TABLE 17",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.86",
+        "status": "Recovered",
+        "time": "03-08-2026 04:41:39 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:46:08 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:46:12 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:46:16 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:46:20 PM"
+    },
+    {
+        "camera": "GALLERY  1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.116",
+        "status": "Recovered",
+        "time": "03-08-2026 04:46:38 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:10 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:13 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:13 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:16 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:17 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:20 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:49:20 PM"
+    },
+    {
+        "camera": "SRN   4",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.105",
+        "status": "Recovered",
+        "time": "03-08-2026 04:49:43 PM"
+    },
+    {
+        "camera": "GALLERY  1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.116",
+        "status": "Offline",
+        "time": "03-08-2026 04:58:52 PM"
+    },
+    {
+        "camera": "GALLERY  1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.116",
+        "status": "Offline",
+        "time": "03-08-2026 04:58:53 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:58:56 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 04:58:57 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:58:59 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 04:59:01 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:59:03 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 04:59:04 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:59:06 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 04:59:08 PM"
+    },
+    {
+        "camera": "GALLERY  1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.116",
+        "status": "Recovered",
+        "time": "03-08-2026 05:00:23 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 05:02:55 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 05:02:58 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 05:03:02 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 05:03:06 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 05:27:54 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 05:34:43 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 05:34:47 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 05:34:51 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 05:34:55 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 05:34:59 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 05:35:02 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:01:34 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:01:39 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:01:46 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:01:52 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:01:57 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:02:02 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:16 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:18 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:23 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:27 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:42 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:44 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:47 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:52 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:55 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:58 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:59 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:04:59 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:05:02 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:14 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:18 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:22 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:26 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:30 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:08:34 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:34:51 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:34:54 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:34:58 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:35:02 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:35:06 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:35:09 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:35:11 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:40 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:43 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:47 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:50 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:54 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:43:57 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 06:44:01 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:18 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:19 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:21 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:23 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:26 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:27 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:30 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:31 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:34 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:35 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:37 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:38 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:39 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:06:39 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:29 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:34 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:38 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:42 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:46 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:33:51 PM"
+    },
+    {
+        "camera": "SRN 1",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.94",
+        "status": "Offline",
+        "time": "03-08-2026 07:41:56 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "03-08-2026 07:42:07 PM"
+    },
+    {
+        "camera": "IPCamera 07",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.200",
+        "status": "Offline",
+        "time": "03-08-2026 07:42:12 PM"
+    },
+    {
+        "camera": "IPCamera 10",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.201",
+        "status": "Offline",
+        "time": "03-08-2026 07:42:16 PM"
+    },
+    {
+        "camera": "IPCamera 20",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.202",
+        "status": "Offline",
+        "time": "03-08-2026 07:42:20 PM"
+    },
+    {
+        "camera": "IPCamera 27",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.203",
+        "status": "Offline",
+        "time": "03-08-2026 07:42:24 PM"
+    },
+    {
+        "camera": "QC TABLE 17",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.86",
+        "status": "Offline",
+        "time": "03-08-2026 07:51:03 PM"
+    },
+    {
+        "camera": "QC TABLE 17",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.86",
+        "status": "Recovered",
+        "time": "03-08-2026 07:52:03 PM"
+    }
+]

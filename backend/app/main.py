@@ -7,18 +7,10 @@ from .database import Base, engine, get_db
 from .models import Camera
 from .schemas import CameraCreate, CameraResponse
 from . import crud
+from .config import NVRS
 
-import os
 import requests
 from requests.auth import HTTPDigestAuth
-from dotenv import load_dotenv
-
-load_dotenv()
-
-NVR_IP = os.getenv("NVR_IP")
-NVR_PORT = os.getenv("NVR_PORT")
-NVR_USERNAME = os.getenv("NVR_USERNAME")
-NVR_PASSWORD = os.getenv("NVR_PASSWORD")
 
 app = FastAPI(title="VisionGuard AI")
 
@@ -60,7 +52,7 @@ def dashboard(db: Session = Depends(get_db)):
         "total": total,
         "online": online,
         "offline": offline,
-        "nvr": 1
+        "nvr": len(NVRS)
     }
 
 
@@ -77,56 +69,63 @@ def create_camera(camera: CameraCreate, db: Session = Depends(get_db)):
 @app.get("/nvr/status")
 def nvr_status():
 
-    if not NVR_IP or not NVR_PORT:
-        return {
-            "status": "CONFIGURATION_ERROR",
-            "message": ".env file not configured correctly"
-        }
+    result = []
 
-    url = f"http://{NVR_IP}:{NVR_PORT}"
+    for nvr in NVRS:
 
-    try:
-        response = requests.get(
-    url,
-    auth=HTTPDigestAuth(NVR_USERNAME, NVR_PASSWORD),
-    timeout=5
-)
+        try:
 
-        if response.status_code in [200, 401]:
-            return {
-                "status": "ONLINE",
-                "ip": NVR_IP,
-                "port": NVR_PORT
-            }
+            response = requests.get(
+                f"http://{nvr['ip']}:{nvr['port']}",
+                auth=HTTPDigestAuth(
+                    nvr["username"],
+                    nvr["password"]
+                ),
+                timeout=5
+            )
 
-        return {
-            "status": "OFFLINE",
-            "http_status": response.status_code
-        }
+            if response.status_code in [200, 401]:
+                status = "ONLINE"
+            else:
+                status = "OFFLINE"
 
-    except Exception as e:
-        return {
-            "status": "OFFLINE",
-            "error": str(e)
-        }
+        except Exception:
+            status = "OFFLINE"
+
+        result.append({
+            "name": nvr["name"],
+            "ip": nvr["ip"],
+            "port": nvr["port"],
+            "status": status
+        })
+
+    return result
 
 
 @app.get("/nvr/raw", response_class=PlainTextResponse)
 def nvr_raw():
 
-    if not NVR_IP or not NVR_PORT:
-        return "NVR Configuration Missing"
+    output = ""
 
-    url = f"http://{NVR_IP}:{NVR_PORT}/ISAPI/ContentMgmt/InputProxy/channels"
+    for nvr in NVRS:
 
-    try:
-        response = requests.get(
-    url,
-    auth=HTTPDigestAuth(NVR_USERNAME, NVR_PASSWORD),
-    timeout=10
-)
+        output += f"\n========== {nvr['name']} ==========\n"
 
-        return response.text
+        try:
 
-    except Exception as e:
-        return str(e)
+            response = requests.get(
+                f"http://{nvr['ip']}:{nvr['port']}/ISAPI/ContentMgmt/InputProxy/channels",
+                auth=HTTPDigestAuth(
+                    nvr["username"],
+                    nvr["password"]
+                ),
+                timeout=10
+            )
+
+            output += response.text
+
+        except Exception as e:
+
+            output += str(e)
+
+    return output
