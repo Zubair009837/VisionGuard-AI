@@ -8,7 +8,7 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Duplicate IP Conflict Alert</title>
+<title>IP Conflict Resolved</title>
 
 <style>
 
@@ -85,7 +85,7 @@ body{
 
 .alert{
 
-    background:#f97316;
+    background:#16a34a;
 
     color:white;
 
@@ -147,9 +147,9 @@ body{
 
 }
 
-.conflict{
+.online{
 
-    color:#ea580c;
+    color:#16a34a;
 
     font-weight:bold;
 
@@ -159,15 +159,15 @@ body{
 
     margin-top:30px;
 
-    background:#fff7ed;
+    background:#ecfdf5;
 
-    border-left:6px solid #f97316;
+    border-left:6px solid #16a34a;
 
     padding:18px;
 
     border-radius:8px;
 
-    color:#7c2d12;
+    color:#14532d;
 
     line-height:1.7;
 
@@ -213,7 +213,7 @@ body{
 
 <div class="alert">
 
-🟠 DUPLICATE IP DETECTED
+🟢 IP CONFLICT RESOLVED
 
 </div>
 
@@ -223,7 +223,7 @@ body{
 
 <tr>
 
-<td class="label">📷 Affected Camera(s)</td>
+<td class="label">📷 Camera(s)</td>
 
 <td class="value">{{camera}}</td>
 
@@ -239,7 +239,7 @@ body{
 
 <tr>
 
-<td class="label">🌐 Duplicate IP</td>
+<td class="label">🌐 IP Address</td>
 
 <td class="value">{{ip}}</td>
 
@@ -247,15 +247,15 @@ body{
 
 <tr>
 
-<td class="label">⚠ Status</td>
+<td class="label">📶 Status</td>
 
-<td class="conflict">{{status}}</td>
+<td class="online">HEALTHY</td>
 
 </tr>
 
 <tr>
 
-<td class="label">🕒 Detection Time</td>
+<td class="label">🕒 Resolution Time</td>
 
 <td class="value">{{time}}</td>
 
@@ -265,17 +265,17 @@ body{
 
 <div class="message">
 
-<h3 style="margin-bottom:12px;color:#ea580c;">
+<h3 style="margin-bottom:12px;color:#16a34a;">
 
-⚠ Immediate Action Required
+✅ Issue Successfully Resolved
 
 </h3>
 
 <p>
 
-Multiple devices are using the same IP address.
+The duplicate IP address conflict has been resolved successfully.
 
-This can cause camera disconnections, unstable video streams, recording failures and communication problems.
+Normal communication between the affected camera(s) and the NVR has resumed.
 
 </p>
 
@@ -283,15 +283,13 @@ This can cause camera disconnections, unstable video streams, recording failures
 
 <ul style="padding-left:20px;line-height:1.8;">
 
-<li>Assign a unique IP address to every camera.</li>
+<li>No duplicate IP address detected.</li>
 
-<li>Check DHCP reservation settings.</li>
+<li>All affected devices are communicating normally.</li>
 
-<li>Verify network switch connectivity.</li>
+<li>Continuous monitoring has resumed.</li>
 
-<li>Restart affected devices after correction.</li>
-
-<li>Confirm all cameras reconnect successfully.</li>
+<li>No further administrator action is required.</li>
 
 </ul>
 
@@ -299,7 +297,7 @@ This can cause camera disconnections, unstable video streams, recording failures
 
 <p>
 
-This alert has been generated automatically by the VisionGuard AI Monitoring Platform.
+This recovery notification has been generated automatically by the VisionGuard AI Monitoring Platform.
 
 </p>
 

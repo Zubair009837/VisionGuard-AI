@@ -1,3 +1,4 @@
+from .video_monitor import start_video_monitor
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
@@ -24,6 +25,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ==========================================================
+# Startup
+# ==========================================================
+
+@app.on_event("startup")
+def startup():
+
+    print("=" * 60)
+    print("VisionGuard AI Starting...")
+    print("=" * 60)
+
+    start_video_monitor()
+
+    print("Video Monitor Started Successfully")
 
 @app.get("/")
 def home():

@@ -8,7 +8,7 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Duplicate IP Conflict Alert</title>
+<title>Network Issue Alert</title>
 
 <style>
 
@@ -48,8 +48,7 @@ body{
     overflow:hidden;
 
     box-shadow:
-    0 10px 25px
-    rgba(0,0,0,.15);
+    0 10px 25px rgba(0,0,0,.15);
 
 }
 
@@ -85,7 +84,7 @@ body{
 
 .alert{
 
-    background:#f97316;
+    background:#f59e0b;
 
     color:white;
 
@@ -96,8 +95,6 @@ body{
     font-weight:bold;
 
     padding:18px;
-
-    letter-spacing:1px;
 
 }
 
@@ -147,9 +144,9 @@ body{
 
 }
 
-.conflict{
+.network{
 
-    color:#ea580c;
+    color:#d97706;
 
     font-weight:bold;
 
@@ -159,15 +156,15 @@ body{
 
     margin-top:30px;
 
-    background:#fff7ed;
+    background:#fffbeb;
 
-    border-left:6px solid #f97316;
+    border-left:6px solid #f59e0b;
 
     padding:18px;
 
     border-radius:8px;
 
-    color:#7c2d12;
+    color:#92400e;
 
     line-height:1.7;
 
@@ -213,7 +210,7 @@ body{
 
 <div class="alert">
 
-🟠 DUPLICATE IP DETECTED
+🌐 NETWORK ISSUE DETECTED
 
 </div>
 
@@ -223,7 +220,7 @@ body{
 
 <tr>
 
-<td class="label">📷 Affected Camera(s)</td>
+<td class="label">📷 Camera</td>
 
 <td class="value">{{camera}}</td>
 
@@ -239,7 +236,7 @@ body{
 
 <tr>
 
-<td class="label">🌐 Duplicate IP</td>
+<td class="label">🌐 IP Address</td>
 
 <td class="value">{{ip}}</td>
 
@@ -247,9 +244,9 @@ body{
 
 <tr>
 
-<td class="label">⚠ Status</td>
+<td class="label">📶 Network Status</td>
 
-<td class="conflict">{{status}}</td>
+<td class="network">{{status}}</td>
 
 </tr>
 
@@ -265,17 +262,15 @@ body{
 
 <div class="message">
 
-<h3 style="margin-bottom:12px;color:#ea580c;">
+<h3 style="margin-bottom:12px;color:#d97706;">
 
-⚠ Immediate Action Required
+🌐 Network Connectivity Problem
 
 </h3>
 
 <p>
 
-Multiple devices are using the same IP address.
-
-This can cause camera disconnections, unstable video streams, recording failures and communication problems.
+A network connectivity issue has been detected between the camera and the monitoring infrastructure.
 
 </p>
 
@@ -283,15 +278,15 @@ This can cause camera disconnections, unstable video streams, recording failures
 
 <ul style="padding-left:20px;line-height:1.8;">
 
-<li>Assign a unique IP address to every camera.</li>
+<li>Check Ethernet cable connection.</li>
 
-<li>Check DHCP reservation settings.</li>
+<li>Verify PoE switch port status.</li>
 
-<li>Verify network switch connectivity.</li>
+<li>Confirm camera network settings.</li>
 
-<li>Restart affected devices after correction.</li>
+<li>Check gateway and DNS connectivity.</li>
 
-<li>Confirm all cameras reconnect successfully.</li>
+<li>Inspect network switch and router health.</li>
 
 </ul>
 
@@ -309,37 +304,17 @@ This alert has been generated automatically by the VisionGuard AI Monitoring Pla
 
 <div class="footer">
 
-<h2>
+<h2>🛡 Tata 1mg</h2>
 
-🛡 Tata 1mg
+<p>NVR Security Operations Center</p>
 
-</h2>
-
-<p>
-
-NVR Security Operations Center
-
-</p>
-
-<p>
-
-Enterprise CCTV Monitoring Platform
-
-</p>
+<p>Enterprise CCTV Monitoring Platform</p>
 
 <br>
 
-<p>
+<p>Generated Automatically • Do Not Reply</p>
 
-Generated Automatically • Do Not Reply
-
-</p>
-
-<p>
-
-© Tata 1mg - NVR Security Operations Center
-
-</p>
+<p>© Tata 1mg - NVR Security Operations Center</p>
 
 </div>
 
