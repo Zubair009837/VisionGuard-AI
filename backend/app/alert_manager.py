@@ -143,3 +143,44 @@ def process_camera(camera):
     # ============================
 
     camera_status[key] = current
+    # =====================================
+# Generic Alert (Video Loss etc.)
+# =====================================
+
+def add_alert(
+    alert_type,
+    severity,
+    title,
+    description,
+):
+
+    history = []
+
+    if HISTORY_FILE.exists():
+
+        try:
+            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                history = json.load(f)
+
+        except:
+            history = []
+
+    history.append({
+
+        "type": alert_type,
+
+        "severity": severity,
+
+        "title": title,
+
+        "description": description,
+
+        "time": datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
+
+    })
+
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+
+        json.dump(history, f, indent=4)
+
+    print(f"[{severity}] {title}")

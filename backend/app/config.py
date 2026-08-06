@@ -53,6 +53,29 @@ ENABLE_EMAIL_LOGGING = True
 MAX_EMAIL_RETRY = 3
 
 SMTP_TIMEOUT = 15
+MAX_EMAIL_RETRY = 3
+
+SMTP_TIMEOUT = 15
+
+# ==========================================================
+# SMTP Configuration
+# ==========================================================
+
+SMTP_SERVER = "smtp.gmail.com"
+
+SMTP_PORT = 587
+
+SMTP_USERNAME = "zubair.khan@1mg.com"
+
+SMTP_PASSWORD = "garajkqynquqccpe"
+
+RECEIVER_EMAIL = "zubair.khan@1mg.com"
+
+# ==========================================================
+# Alert Configuration
+# ==========================================================
+
+ENABLE_CAMERA_OFFLINE_ALERT = True
 
 # ==========================================================
 # Alert Configuration

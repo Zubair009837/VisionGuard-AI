@@ -681,3 +681,196 @@ if __name__ == "__main__":
     print("\n" + "=" * 70)
     print("✅ ALL TEST EMAILS SENT SUCCESSFULLY")
     print("=" * 70)
+    # ==========================================================
+# VisionGuard AI Video Monitoring Emails
+# ==========================================================
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
+
+from .config import (
+    SMTP_SERVER,
+    SMTP_PORT,
+    SMTP_USERNAME,
+    SMTP_PASSWORD,
+    RECEIVER_EMAIL,
+    APPLICATION_NAME
+)
+
+
+# ==========================================================
+# Internal Send Mail
+# ==========================================================
+
+def _send(subject, html):
+
+    try:
+
+        msg = MIMEMultipart("alternative")
+
+        msg["Subject"] = subject
+        msg["From"] = SMTP_USERNAME
+        msg["To"] = RECEIVER_EMAIL
+
+        msg.attach(
+            MIMEText(html, "html")
+        )
+
+        server = smtplib.SMTP(
+            SMTP_SERVER,
+            SMTP_PORT
+        )
+
+        server.starttls()
+
+        server.login(
+            SMTP_USERNAME,
+            SMTP_PASSWORD
+        )
+
+        server.send_message(msg)
+
+        server.quit()
+
+        print("✅ Email Sent :", subject)
+
+    except Exception as e:
+
+        print("❌ Email Error :", e)
+
+
+# ==========================================================
+# Video Loss Email
+# ==========================================================
+
+def send_video_loss_email(
+
+    camera,
+    nvr,
+    ip,
+    event_time
+
+):
+
+    subject = f"🚨 VIDEO LOSS - {camera}"
+
+    html = f"""
+    <html>
+
+    <body style="font-family:Arial;background:#f5f5f5;padding:30px;">
+
+    <div style="background:white;padding:30px;border-radius:10px;">
+
+    <h2 style="color:red;">
+    🚨 VisionGuard AI
+    </h2>
+
+    <h3>Video Stream Lost</h3>
+
+    <table cellpadding="8">
+
+    <tr>
+    <td><b>Camera</b></td>
+    <td>{camera}</td>
+    </tr>
+
+    <tr>
+    <td><b>NVR</b></td>
+    <td>{nvr}</td>
+    </tr>
+
+    <tr>
+    <td><b>IP</b></td>
+    <td>{ip}</td>
+    </tr>
+
+    <tr>
+    <td><b>Time</b></td>
+    <td>{event_time}</td>
+    </tr>
+
+    </table>
+
+    <br>
+
+    <span style="color:red;font-size:18px;">
+    Video Stream Not Available
+    </span>
+
+    </div>
+
+    </body>
+
+    </html>
+    """
+
+    _send(subject, html)
+
+
+# ==========================================================
+# Video Restored Email
+# ==========================================================
+
+def send_video_restored_email(
+
+    camera,
+    nvr,
+    ip,
+    event_time
+
+):
+
+    subject = f"✅ VIDEO RESTORED - {camera}"
+
+    html = f"""
+    <html>
+
+    <body style="font-family:Arial;background:#f5f5f5;padding:30px;">
+
+    <div style="background:white;padding:30px;border-radius:10px;">
+
+    <h2 style="color:green;">
+    ✅ VisionGuard AI
+    </h2>
+
+    <h3>Video Stream Restored</h3>
+
+    <table cellpadding="8">
+
+    <tr>
+    <td><b>Camera</b></td>
+    <td>{camera}</td>
+    </tr>
+
+    <tr>
+    <td><b>NVR</b></td>
+    <td>{nvr}</td>
+    </tr>
+
+    <tr>
+    <td><b>IP</b></td>
+    <td>{ip}</td>
+    </tr>
+
+    <tr>
+    <td><b>Time</b></td>
+    <td>{event_time}</td>
+    </tr>
+
+    </table>
+
+    <br>
+
+    <span style="color:green;font-size:18px;">
+    Video Stream Restored Successfully
+    </span>
+
+    </div>
+
+    </body>
+
+    </html>
+    """
+
+    _send(subject, html)

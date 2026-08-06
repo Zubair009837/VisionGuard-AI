@@ -1,9 +1,16 @@
-import threading
-import time
-from datetime import datetime
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 1 / 10
+# Imports + Configuration + Runtime Variables
+# ==========================================================
+
 import cv2
+import time
+import threading
 import requests
 import xml.etree.ElementTree as ET
+
+from datetime import datetime
 from requests.auth import HTTPDigestAuth
 
 from .config import NVRS
@@ -13,95 +20,379 @@ from .email_service import (
 )
 
 # ==========================================================
-# VisionGuard AI Enterprise Video Monitor
+# Enterprise Configuration
 # ==========================================================
 
-CHECK_INTERVAL = 10
-REQUEST_TIMEOUT = 8
+CHECK_INTERVAL = 10          # Monitor every 10 seconds
 
-# Camera status memory
+VIDEO_LOSS_DELAY = 60        # Send alert after 60 sec
+
+REQUEST_TIMEOUT = 10
+
+RTSP_PORT = 554
+
+# ==========================================================
+# Runtime Storage
+# ==========================================================
+
+# Camera Current Status
 CAMERA_STATUS = {}
 
-# Prevent duplicate alerts
+# Offline Start Time
+VIDEO_LOSS_TIME = {}
+
+# Alert Protection
 LOSS_ALERT_SENT = set()
+
 RESTORE_ALERT_SENT = set()
 
-print("=" * 70)
-print("VisionGuard AI Enterprise Video Monitor Loaded")
-print("=" * 70)
+# Camera Cache
+CAMERA_CACHE = {}
 
+# Event History
+EVENT_HISTORY = []
+
+# Thread Lock
+LOCK = threading.Lock()
 
 # ==========================================================
-# Fetch Streaming Channels
+# Banner
 # ==========================================================
 
-def get_stream_channels(nvr):
+print("=" * 70)
+print("VisionGuard AI Enterprise Video Monitoring Engine")
+print("=" * 70)
 
-    url = (
-        f"http://{nvr['ip']}:{nvr['port']}"
-        "/ISAPI/Streaming/channels"
+# ==========================================================
+# Helper Functions
+# ==========================================================
+
+def current_time():
+
+    return datetime.now().strftime(
+        "%d-%m-%Y %I:%M:%S %p"
     )
+
+
+def log(message):
+
+    print(
+        f"[{current_time()}] {message}"
+    )
+
+
+# ==========================================================
+# RTSP URL Builder
+# ==========================================================
+
+def rtsp_url(nvr, stream_id):
+
+    return (
+
+        f"rtsp://"
+
+        f"{nvr['username']}:{nvr['password']}@"
+
+        f"{nvr['ip']}:{RTSP_PORT}"
+
+        f"/Streaming/Channels/{stream_id}"
+
+    )
+
+
+# ==========================================================
+# Hikvision ISAPI URL Builder
+# ==========================================================
+
+def isapi_url(nvr, endpoint):
+
+    return (
+
+        f"http://"
+
+        f"{nvr['ip']}:{nvr['port']}"
+
+        f"{endpoint}"
+
+    )
+
+
+# ==========================================================
+# HTTP GET Wrapper
+# ==========================================================
+
+def hik_get(nvr, endpoint):
 
     try:
 
         response = requests.get(
-            url,
+
+            isapi_url(nvr, endpoint),
+
             auth=HTTPDigestAuth(
+
                 nvr["username"],
                 nvr["password"]
+
             ),
+
             timeout=REQUEST_TIMEOUT
+
         )
 
         response.raise_for_status()
 
-        root = ET.fromstring(response.text)
-
-        channels = []
-
-        for channel in root.findall(".//{*}StreamingChannel"):
-
-            id_node = channel.find("{*}id")
-
-            if id_node is None:
-                continue
-
-            stream_id = id_node.text.strip()
-
-            input_node = channel.find("{*}dynVideoInputChannelID")
-
-            camera_no = (
-                input_node.text.strip()
-                if input_node is not None
-                else stream_id
-            )
-
-            channels.append({
-                "stream_id": stream_id,
-                "camera": f"Camera {camera_no}"
-            })
-
-        return channels
+        return response.text
 
     except Exception as e:
 
-        print(f"[{nvr['name']}] Channel Fetch Error : {e}")
+        log(
+
+            f"{nvr['name']} API Error : {e}"
+
+        )
+
+        return None
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 2 / 10
+# Hikvision Camera APIs
+# ==========================================================
+
+# ==========================================================
+# Fetch Camera Status
+# ==========================================================
+
+def fetch_camera_status(nvr):
+
+    xml = hik_get(
+
+        nvr,
+
+        "/ISAPI/ContentMgmt/InputProxy/channels/status"
+
+    )
+
+    if xml is None:
 
         return []
+
+    cameras = []
+
+    try:
+
+        root = ET.fromstring(xml)
+
+        for cam in root.findall(".//{*}InputProxyChannelStatus"):
+
+            camera = {}
+
+            id_node = cam.find("{*}id")
+
+            ip_node = cam.find(".//{*}ipAddress")
+
+            online_node = cam.find("{*}online")
+
+            detect_node = cam.find("{*}chanDetectResult")
+
+            if id_node is not None:
+
+                camera["id"] = int(id_node.text)
+
+            else:
+
+                camera["id"] = 0
+
+            if ip_node is not None:
+
+                camera["ip"] = ip_node.text.strip()
+
+            else:
+
+                camera["ip"] = ""
+
+            if online_node is not None:
+
+                camera["online"] = (
+
+                    online_node.text.lower()
+
+                    == "true"
+
+                )
+
+            else:
+
+                camera["online"] = False
+
+            if detect_node is not None:
+
+                camera["detect"] = (
+
+                    detect_node.text.strip()
+
+                )
+
+            else:
+
+                camera["detect"] = "unknown"
+
+            cameras.append(camera)
+
+    except Exception as e:
+
+        log(
+
+            f"{nvr['name']} XML Parse Error : {e}"
+
+        )
+
+    return cameras
+
+
+# ==========================================================
+# Fetch Camera Names
+# ==========================================================
+
+def fetch_camera_names(nvr):
+
+    xml = hik_get(
+
+        nvr,
+
+        "/ISAPI/ContentMgmt/InputProxy/channels"
+
+    )
+
+    if xml is None:
+
+        return {}
+
+    names = {}
+
+    try:
+
+        root = ET.fromstring(xml)
+
+        for cam in root.findall(".//{*}InputProxyChannel"):
+
+            id_node = cam.find("{*}id")
+
+            name_node = cam.find("{*}name")
+
+            if id_node is None:
+
+                continue
+
+            cam_id = int(id_node.text)
+
+            if name_node is not None:
+
+                names[cam_id] = (
+
+                    name_node.text.strip()
+
+                )
+
+            else:
+
+                names[cam_id] = (
+
+                    f"Camera {cam_id}"
+
+                )
+
+    except Exception as e:
+
+        log(
+
+            f"{nvr['name']} Name Parse Error : {e}"
+
+        )
+
+    return names
+
+
+# ==========================================================
+# Load Cameras From NVR
+# ==========================================================
+
+def load_camera_cache(nvr):
+
+    status = fetch_camera_status(nvr)
+
+    names = fetch_camera_names(nvr)
+
+    cameras = []
+
+    for cam in status:
+
+        stream = cam["id"] * 100 + 1
+
+        cameras.append({
+
+            "id": cam["id"],
+
+            "name": names.get(
+
+                cam["id"],
+
+                f"Camera {cam['id']}"
+
+            ),
+
+            "ip": cam["ip"],
+
+            "online": cam["online"],
+
+            "detect": cam["detect"],
+
+            "stream": stream
+
+        })
+
+    CAMERA_CACHE[nvr["name"]] = cameras
+
+    log(
+
+        f"{nvr['name']} : "
+
+        f"{len(cameras)} Cameras Loaded"
+
+    )
+
+    return cameras
+
+
+# ==========================================================
+# Get Cameras
+# ==========================================================
+
+def get_cameras(nvr):
+
+    if nvr["name"] not in CAMERA_CACHE:
+
+        return load_camera_cache(nvr)
+
+    return CAMERA_CACHE[nvr["name"]]
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 3 / 10
+# RTSP Video Stream Checker
+# ==========================================================
+
 # ==========================================================
 # Check RTSP Stream
 # ==========================================================
 
-import cv2
-
 def stream_alive(nvr, stream_id):
 
-    rtsp_url = (
-        f"rtsp://"
-        f"{nvr['username']}:"
-        f"{nvr['password']}@"
-        f"{nvr['ip']}:554/"
-        f"Streaming/Channels/{stream_id}"
+    url = rtsp_url(
+
+        nvr,
+
+        stream_id
+
     )
 
     cap = None
@@ -109,203 +400,713 @@ def stream_alive(nvr, stream_id):
     try:
 
         cap = cv2.VideoCapture(
-            rtsp_url,
+
+            url,
+
             cv2.CAP_FFMPEG
+
         )
 
         if not cap.isOpened():
+
             return False
 
-        ok, frame = cap.read()
+        success, frame = cap.read()
 
-        return ok and frame is not None
+        if not success:
 
-    except Exception:
+            return False
+
+        if frame is None:
+
+            return False
+
+        return True
+
+    except Exception as e:
+
+        log(
+
+            f"{nvr['name']} Stream Error : {e}"
+
+        )
 
         return False
 
     finally:
 
         if cap is not None:
+
             cap.release()
 
 
 # ==========================================================
-# Check Single Camera
+# Get Current Camera State
 # ==========================================================
 
-def check_camera(nvr, channel):
+def camera_online(nvr, camera):
 
-    stream_id = channel["stream_id"]
+    try:
 
-    camera_name = channel["camera"]
+        return stream_alive(
 
-    key = f"{nvr['name']}-{camera_name}"
+            nvr,
 
-    current_status = stream_alive(
-        nvr,
-        stream_id
+            camera["stream"]
+
+        )
+
+    except Exception:
+
+        return False
+
+
+# ==========================================================
+# Initialize Camera Status
+# ==========================================================
+
+def initialize_camera(camera_key, current_state):
+
+    CAMERA_STATUS[camera_key] = current_state
+
+    if current_state:
+
+        log(
+
+            f"{camera_key} -> ONLINE"
+
+        )
+
+    else:
+
+        log(
+
+            f"{camera_key} -> OFFLINE"
+
+        )
+
+
+# ==========================================================
+# Save Video Loss Time
+# ==========================================================
+
+def start_loss_timer(camera_key):
+
+    if camera_key not in VIDEO_LOSS_TIME:
+
+        VIDEO_LOSS_TIME[camera_key] = datetime.now()
+
+        log(
+
+            f"{camera_key} Loss Timer Started"
+
+        )
+
+
+# ==========================================================
+# Stop Video Loss Timer
+# ==========================================================
+
+def stop_loss_timer(camera_key):
+
+    if camera_key in VIDEO_LOSS_TIME:
+
+        downtime = (
+
+            datetime.now()
+
+            -
+
+            VIDEO_LOSS_TIME[camera_key]
+
+        )
+
+        del VIDEO_LOSS_TIME[camera_key]
+
+        return downtime
+
+    return None
+
+
+# ==========================================================
+# Loss Duration
+# ==========================================================
+
+def loss_seconds(camera_key):
+
+    if camera_key not in VIDEO_LOSS_TIME:
+
+        return 0
+
+    return (
+
+        datetime.now()
+
+        -
+
+        VIDEO_LOSS_TIME[camera_key]
+
+    ).total_seconds()
+
+
+# ==========================================================
+# Reset Camera Alerts
+# ==========================================================
+
+def reset_alerts(camera_key):
+
+    LOSS_ALERT_SENT.discard(
+
+        camera_key
+
     )
 
-    previous_status = CAMERA_STATUS.get(key)
+    RESTORE_ALERT_SENT.discard(
 
-    # First Scan
-    if previous_status is None:
+        camera_key
 
-        CAMERA_STATUS[key] = current_status
+    )
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 4 / 10
+# Video Loss Detection Engine
+# ==========================================================
+
+# ==========================================================
+# Send Video Loss Alert
+# ==========================================================
+
+def handle_video_loss(nvr, camera, camera_key):
+
+    start_loss_timer(camera_key)
+
+    seconds = loss_seconds(camera_key)
+
+    if seconds < VIDEO_LOSS_DELAY:
+
+        log(
+
+            f"{camera['name']} Waiting "
+
+            f"{int(seconds)}/{VIDEO_LOSS_DELAY}s"
+
+        )
 
         return
 
-    # ------------------------------------------------------
-    # Video Loss
-    # ------------------------------------------------------
+    if camera_key in LOSS_ALERT_SENT:
 
-    if previous_status and not current_status:
+        return
 
-        if key not in LOSS_ALERT_SENT:
+    log("=" * 60)
 
-            print(f"❌ VIDEO LOST : {key}")
+    log(f"VIDEO LOSS DETECTED : {camera['name']}")
 
-            send_video_loss_email(
+    log(f"NVR     : {nvr['name']}")
 
-                camera=camera_name,
+    log(f"IP      : {camera['ip']}")
 
-                nvr=nvr["name"],
+    log("=" * 60)
 
-                ip=nvr["ip"],
+    try:
 
-                event_time=datetime.now().strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
-            )
+        send_video_loss_email(
 
-            LOSS_ALERT_SENT.add(key)
+            camera=camera["name"],
 
-            RESTORE_ALERT_SENT.discard(key)
+            nvr=nvr["name"],
 
-    # ------------------------------------------------------
-    # Video Restored
-    # ------------------------------------------------------
+            ip=camera["ip"],
 
-    elif (not previous_status) and current_status:
+            event_time=current_time()
 
-        if key not in RESTORE_ALERT_SENT:
+        )
 
-            print(f"✅ VIDEO RESTORED : {key}")
+        log(
 
-            send_video_restored_email(
+            f"Email Sent : {camera['name']}"
 
-                camera=camera_name,
+        )
 
-                nvr=nvr["name"],
+    except Exception as e:
 
-                ip=nvr["ip"],
+        log(
 
-                event_time=datetime.now().strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
-            )
+            f"Email Error : {e}"
 
-            RESTORE_ALERT_SENT.add(key)
+        )
 
-            LOSS_ALERT_SENT.discard(key)
+    LOSS_ALERT_SENT.add(camera_key)
 
-    CAMERA_STATUS[key] = current_status
+    RESTORE_ALERT_SENT.discard(camera_key)
+
+    EVENT_HISTORY.append({
+
+        "time": current_time(),
+
+        "camera": camera["name"],
+
+        "nvr": nvr["name"],
+
+        "status": "VIDEO LOST"
+
+    })
+
+
 # ==========================================================
-# Check Complete NVR
+# Save Current Camera State
+# ==========================================================
+
+def update_camera_state(camera_key, state):
+
+    CAMERA_STATUS[camera_key] = state
+
+
+# ==========================================================
+# Process Offline Camera
+# ==========================================================
+
+def process_offline_camera(
+
+    nvr,
+
+    camera,
+
+    camera_key
+
+):
+
+    handle_video_loss(
+
+        nvr,
+
+        camera,
+
+        camera_key
+
+    )
+
+    update_camera_state(
+
+        camera_key,
+
+        False
+
+    )
+
+
+# ==========================================================
+# Is First Scan
+# ==========================================================
+
+def is_first_scan(camera_key):
+
+    return camera_key not in CAMERA_STATUS
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 5 / 10
+# Video Recovery Engine
+# ==========================================================
+
+# ==========================================================
+# Send Recovery Email
+# ==========================================================
+
+def handle_video_restore(nvr, camera, camera_key):
+
+    downtime = stop_loss_timer(camera_key)
+
+    if camera_key in RESTORE_ALERT_SENT:
+
+        update_camera_state(
+
+            camera_key,
+
+            True
+
+        )
+
+        return
+
+    log("=" * 60)
+
+    log(f"VIDEO RESTORED : {camera['name']}")
+
+    log(f"NVR      : {nvr['name']}")
+
+    log(f"IP       : {camera['ip']}")
+
+    if downtime is not None:
+
+        log(f"Downtime : {downtime}")
+
+    log("=" * 60)
+
+    try:
+
+        send_video_restored_email(
+
+            camera=camera["name"],
+
+            nvr=nvr["name"],
+
+            ip=camera["ip"],
+
+            event_time=current_time()
+
+        )
+
+        log(
+
+            f"Recovery Email Sent : {camera['name']}"
+
+        )
+
+    except Exception as e:
+
+        log(
+
+            f"Recovery Email Error : {e}"
+
+        )
+
+    RESTORE_ALERT_SENT.add(camera_key)
+
+    LOSS_ALERT_SENT.discard(camera_key)
+
+    EVENT_HISTORY.append({
+
+        "time": current_time(),
+
+        "camera": camera["name"],
+
+        "nvr": nvr["name"],
+
+        "status": "VIDEO RESTORED",
+
+        "downtime": str(downtime)
+
+    })
+
+    update_camera_state(
+
+        camera_key,
+
+        True
+
+    )
+
+
+# ==========================================================
+# Process One Camera
+# ==========================================================
+
+def process_camera(nvr, camera):
+
+    camera_key = (
+
+        f"{nvr['name']}_"
+
+        f"{camera['id']}"
+
+    )
+
+    current_state = camera_online(
+
+        nvr,
+
+        camera
+
+    )
+
+    if is_first_scan(camera_key):
+
+        initialize_camera(
+
+            camera_key,
+
+            current_state
+
+        )
+
+        return
+
+    previous_state = CAMERA_STATUS.get(
+
+        camera_key,
+
+        False
+
+    )
+
+    # -----------------------------
+    # Camera Online
+    # -----------------------------
+
+    if current_state:
+
+        if not previous_state:
+
+            handle_video_restore(
+
+                nvr,
+
+                camera,
+
+                camera_key
+
+            )
+
+        else:
+
+            update_camera_state(
+
+                camera_key,
+
+                True
+
+            )
+
+        return
+
+    # -----------------------------
+    # Camera Offline
+    # -----------------------------
+
+    if previous_state:
+
+        process_offline_camera(
+
+            nvr,
+
+            camera,
+
+            camera_key
+
+        )
+
+    else:
+
+        handle_video_loss(
+
+            nvr,
+
+            camera,
+
+            camera_key
+
+        )
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 6 / 10
+# NVR Scanner
+# ==========================================================
+
+# ==========================================================
+# Scan One NVR
 # ==========================================================
 
 def check_nvr(nvr):
 
-    print(f"\nChecking {nvr['name']}...")
+    log("=" * 60)
 
-    channels = get_stream_channels(nvr)
+    log(f"Scanning {nvr['name']}")
 
-    if not channels:
+    cameras = get_cameras(nvr)
 
-        print(f"{nvr['name']} : No Streaming Channels Found")
+    if not cameras:
+
+        log("No Cameras Found")
 
         return
 
-    print(f"Found {len(channels)} Cameras")
+    total = len(cameras)
 
     online = 0
+
     offline = 0
 
-    for channel in channels:
+    for camera in cameras:
 
         try:
 
-            alive = stream_alive(
+            process_camera(
+
                 nvr,
-                channel["stream_id"]
+
+                camera
+
             )
 
-            if alive:
+            key = f"{nvr['name']}_{camera['id']}"
+
+            state = CAMERA_STATUS.get(
+
+                key,
+
+                False
+
+            )
+
+            if state:
+
                 online += 1
+
             else:
+
                 offline += 1
 
-            check_camera(
-                nvr,
-                channel
+        except Exception as e:
+
+            log(
+
+                f"{camera['name']} Error : {e}"
+
+            )
+
+    log("-" * 60)
+
+    log(f"NVR     : {nvr['name']}")
+
+    log(f"Total   : {total}")
+
+    log(f"Online  : {online}")
+
+    log(f"Offline : {offline}")
+
+    log("=" * 60)
+
+
+# ==========================================================
+# Scan All NVRs
+# ==========================================================
+
+def scan_all_nvrs():
+
+    total_cameras = 0
+
+    total_online = 0
+
+    total_offline = 0
+
+    start = time.time()
+
+    log("")
+
+    log("=" * 70)
+
+    log("VisionGuard AI Enterprise Scan Started")
+
+    log("=" * 70)
+
+    for nvr in NVRS:
+
+        try:
+
+            check_nvr(
+
+                nvr
+
             )
 
         except Exception as e:
 
-            print(
-                f"{channel['camera']} Error : {e}"
+            log(
+
+                f"{nvr['name']} Scan Error : {e}"
+
             )
 
-    print(
-        f"{nvr['name']} Summary : "
-        f"{online} Online | "
-        f"{offline} Offline"
+    for key, state in CAMERA_STATUS.items():
+
+        total_cameras += 1
+
+        if state:
+
+            total_online += 1
+
+        else:
+
+            total_offline += 1
+
+    elapsed = round(
+
+        time.time() - start,
+
+        2
+
     )
+
+    log("=" * 70)
+
+    log("Enterprise Scan Completed")
+
+    log(f"Total Cameras : {total_cameras}")
+
+    log(f"Online        : {total_online}")
+
+    log(f"Offline       : {total_offline}")
+
+    log(f"Scan Time     : {elapsed} sec")
+
+    log("=" * 70)
 # ==========================================================
-# Monitor All NVRs
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 7 / 10
+# Background Monitor Thread
 # ==========================================================
 
-def monitor_all_nvrs():
+MONITOR_RUNNING = False
 
-    print("=" * 70)
-    print("VIDEO MONITOR STARTED")
-    print("=" * 70)
-
-    while True:
-
-        start_time = time.time()
-
-        for nvr in NVRS:
-
-            try:
-
-                check_nvr(nvr)
-
-            except Exception as e:
-
-                print(
-                    f"{nvr['name']} Error : {e}"
-                )
-
-        elapsed = time.time() - start_time
-
-        if elapsed < CHECK_INTERVAL:
-
-            time.sleep(
-                CHECK_INTERVAL - elapsed
-            )
+MONITOR_THREAD = None
 
 
 # ==========================================================
-# Background Thread
+# Monitor Loop
+# ==========================================================
+
+def monitor():
+
+    global MONITOR_RUNNING
+
+    log("=" * 70)
+    log("VisionGuard Video Monitor Started")
+    log("=" * 70)
+
+    MONITOR_RUNNING = True
+
+    while MONITOR_RUNNING:
+
+        try:
+
+            scan_all_nvrs()
+
+        except Exception as e:
+
+            log(f"Monitor Error : {e}")
+
+        time.sleep(CHECK_INTERVAL)
+
+
+# ==========================================================
+# Start Monitor
 # ==========================================================
 
 def start_video_monitor():
 
-    monitor_thread = threading.Thread(
+    global MONITOR_THREAD
 
-        target=monitor_all_nvrs,
+    if MONITOR_THREAD is not None:
+
+        if MONITOR_THREAD.is_alive():
+
+            log("Video Monitor Already Running")
+
+            return
+
+    MONITOR_THREAD = threading.Thread(
+
+        target=monitor,
 
         daemon=True,
 
@@ -313,43 +1114,371 @@ def start_video_monitor():
 
     )
 
-    monitor_thread.start()
+    MONITOR_THREAD.start()
 
-    print("=" * 70)
-    print("Background Monitor Thread Started")
-    print("=" * 70)
+    log("Video Monitor Started Successfully")
+
+
 # ==========================================================
-# Manual Check
+# Stop Monitor
 # ==========================================================
 
-def run_once():
+def stop_video_monitor():
 
-    print("=" * 70)
-    print("Running One-Time Video Health Check")
-    print("=" * 70)
+    global MONITOR_RUNNING
+
+    MONITOR_RUNNING = False
+
+    log("Stopping Video Monitor...")
+
+    if MONITOR_THREAD is not None:
+
+        MONITOR_THREAD.join(timeout=5)
+
+    log("Video Monitor Stopped")
+
+
+# ==========================================================
+# Monitor Status
+# ==========================================================
+
+def monitor_status():
+
+    if MONITOR_THREAD is None:
+
+        return False
+
+    return MONITOR_THREAD.is_alive()
+
+
+# ==========================================================
+# Restart Monitor
+# ==========================================================
+
+def restart_video_monitor():
+
+    stop_video_monitor()
+
+    time.sleep(2)
+
+    start_video_monitor()
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 8 / 10
+# Event History & Statistics
+# ==========================================================
+
+MAX_HISTORY = 1000
+
+
+# ==========================================================
+# Add Event
+# ==========================================================
+
+def add_event(
+    camera,
+    nvr,
+    status,
+    ip="",
+    downtime=""
+):
+
+    event = {
+
+        "time": current_time(),
+
+        "camera": camera,
+
+        "nvr": nvr,
+
+        "ip": ip,
+
+        "status": status,
+
+        "downtime": downtime
+
+    }
+
+    EVENT_HISTORY.append(event)
+
+    if len(EVENT_HISTORY) > MAX_HISTORY:
+
+        EVENT_HISTORY.pop(0)
+
+
+# ==========================================================
+# Get Event History
+# ==========================================================
+
+def get_event_history():
+
+    return EVENT_HISTORY.copy()
+
+
+# ==========================================================
+# Clear History
+# ==========================================================
+
+def clear_event_history():
+
+    EVENT_HISTORY.clear()
+
+    log("Event History Cleared")
+
+
+# ==========================================================
+# Statistics
+# ==========================================================
+
+def get_statistics():
+
+    total = len(CAMERA_STATUS)
+
+    online = 0
+
+    offline = 0
+
+    for status in CAMERA_STATUS.values():
+
+        if status:
+
+            online += 1
+
+        else:
+
+            offline += 1
+
+    return {
+
+        "total": total,
+
+        "online": online,
+
+        "offline": offline,
+
+        "alerts": len(EVENT_HISTORY),
+
+        "loss_alerts": len(LOSS_ALERT_SENT),
+
+        "restore_alerts": len(RESTORE_ALERT_SENT)
+
+    }
+
+
+# ==========================================================
+# Print Statistics
+# ==========================================================
+
+def print_statistics():
+
+    stats = get_statistics()
+
+    log("=" * 60)
+
+    log("VisionGuard Enterprise Statistics")
+
+    log("=" * 60)
+
+    log(f"Total Cameras : {stats['total']}")
+
+    log(f"Online        : {stats['online']}")
+
+    log(f"Offline       : {stats['offline']}")
+
+    log(f"Events        : {stats['alerts']}")
+
+    log(f"Loss Alerts   : {stats['loss_alerts']}")
+
+    log(f"Recovery      : {stats['restore_alerts']}")
+
+    log("=" * 60)
+
+
+# ==========================================================
+# Print Recent Events
+# ==========================================================
+
+def print_recent_events(limit=10):
+
+    log("=" * 60)
+
+    log("Recent Events")
+
+    log("=" * 60)
+
+    events = EVENT_HISTORY[-limit:]
+
+    if not events:
+
+        log("No Events")
+
+        return
+
+    for event in events:
+
+        log(
+
+            f"[{event['time']}] "
+
+            f"{event['camera']} | "
+
+            f"{event['status']} | "
+
+            f"{event['nvr']}"
+
+        )
+
+    log("=" * 60)
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 9 / 10
+# Startup, Health & FastAPI Integration
+# ==========================================================
+
+START_TIME = datetime.now()
+
+
+# ==========================================================
+# Engine Health
+# ==========================================================
+
+def health():
+
+    uptime = datetime.now() - START_TIME
+
+    return {
+
+        "status": "running" if monitor_status() else "stopped",
+
+        "uptime": str(uptime).split(".")[0],
+
+        "total_cameras": len(CAMERA_STATUS),
+
+        "offline_cameras": sum(
+
+            1
+
+            for status in CAMERA_STATUS.values()
+
+            if not status
+
+        ),
+
+        "events": len(EVENT_HISTORY)
+
+    }
+
+
+# ==========================================================
+# Print Health
+# ==========================================================
+
+def print_health():
+
+    h = health()
+
+    log("=" * 60)
+
+    log("VisionGuard Enterprise Health")
+
+    log("=" * 60)
+
+    log(f"Status    : {h['status']}")
+
+    log(f"Uptime    : {h['uptime']}")
+
+    log(f"Cameras   : {h['total_cameras']}")
+
+    log(f"Offline   : {h['offline_cameras']}")
+
+    log(f"Events    : {h['events']}")
+
+    log("=" * 60)
+
+
+# ==========================================================
+# Startup
+# ==========================================================
+
+def startup():
+
+    log("=" * 70)
+
+    log("VisionGuard AI Enterprise Starting")
+
+    log("=" * 70)
+
+    start_video_monitor()
+
+    log("Startup Completed")
+
+
+# ==========================================================
+# Shutdown
+# ==========================================================
+
+def shutdown():
+
+    log("=" * 70)
+
+    log("VisionGuard AI Enterprise Stopping")
+
+    log("=" * 70)
+
+    stop_video_monitor()
+
+    log("Shutdown Completed")
+
+
+# ==========================================================
+# Force Refresh Camera Cache
+# ==========================================================
+
+def refresh_camera_cache():
+
+    CAMERA_CACHE.clear()
+
+    log("Refreshing Camera Cache...")
 
     for nvr in NVRS:
 
         try:
 
-            check_nvr(nvr)
+            load_camera_cache(nvr)
 
         except Exception as e:
 
-            print(f"{nvr['name']} Error : {e}")
+            log(
+
+                f"{nvr['name']} Cache Error : {e}"
+
+            )
+
+    log("Camera Cache Updated")
 
 
 # ==========================================================
-# Main Entry
+# Manual Scan
 # ==========================================================
 
-if __name__ == "__main__":
+def manual_scan():
 
-    print("=" * 70)
-    print("VisionGuard AI Enterprise Video Monitor")
-    print("=" * 70)
+    log("Manual Scan Started")
 
-    start_video_monitor()
+    scan_all_nvrs()
+
+    print_statistics()
+
+    print_recent_events()
+# ==========================================================
+# VisionGuard AI Enterprise Video Monitoring Engine
+# PART 10 / 10
+# Main Entry Point
+# ==========================================================
+
+def run():
+
+    startup()
 
     try:
 
@@ -359,287 +1488,63 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
 
-        print("\nStopping Video Monitor...")
+        log("Keyboard Interrupt Received")
 
-        print("Video Monitor Stopped Successfully.")
-# ==========================================================
-# Check Single Camera
-# ==========================================================
-
-def check_camera(nvr, channel):
-
-    global TOTAL_VIDEO_LOSS
-    global TOTAL_VIDEO_RESTORED
-
-    stream_id = channel["stream_id"]
-    camera_name = channel["camera"]
-
-    key = f"{nvr['name']}-{camera_name}"
-
-    current_status = stream_alive(
-        nvr,
-        stream_id
-    )
-
-    previous_status = CAMERA_STATUS.get(key)
-
-    # First Scan
-    if previous_status is None:
-
-        CAMERA_STATUS[key] = current_status
-        return
-
-    # ------------------------------------------------------
-    # Video Lost
-    # ------------------------------------------------------
-
-    if previous_status and not current_status:
-
-        if key not in LOSS_ALERT_SENT:
-
-            print(f"❌ VIDEO LOST : {key}")
-
-            VIDEO_LOSS_TIME[key] = datetime.now()
-
-            TOTAL_VIDEO_LOSS += 1
-
-            send_video_loss_email(
-                camera=camera_name,
-                nvr=nvr["name"],
-                ip=nvr["ip"],
-                event_time=datetime.now().strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
-            )
-
-            LOSS_ALERT_SENT.add(key)
-            RESTORE_ALERT_SENT.discard(key)
-
-    # ------------------------------------------------------
-    # Video Restored
-    # ------------------------------------------------------
-
-    elif (not previous_status) and current_status:
-
-        if key not in RESTORE_ALERT_SENT:
-
-            print(f"✅ VIDEO RESTORED : {key}")
-
-            TOTAL_VIDEO_RESTORED += 1
-
-            start = VIDEO_LOSS_TIME.pop(key, None)
-
-            if start:
-
-                duration = datetime.now() - start
-
-                print(
-                    f"{key} Downtime : {duration}"
-                )
-
-            send_video_restored_email(
-                camera=camera_name,
-                nvr=nvr["name"],
-                ip=nvr["ip"],
-                event_time=datetime.now().strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
-            )
-
-            RESTORE_ALERT_SENT.add(key)
-            LOSS_ALERT_SENT.discard(key)
-
-    CAMERA_STATUS[key] = current_status
-# ==========================================================
-# Enterprise Event Logger
-# ==========================================================
-
-import json
-import os
-
-BASE_DIR = os.path.dirname(__file__)
-
-EVENT_LOG_FILE = os.path.join(
-    BASE_DIR,
-    "video_monitor_history.json"
-)
-
-
-def load_event_history():
-
-    if not os.path.exists(EVENT_LOG_FILE):
-        return []
-
-    try:
-
-        with open(
-            EVENT_LOG_FILE,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            return json.load(f)
-
-    except Exception:
-
-        return []
-
-
-EVENT_HISTORY = load_event_history()
-
-
-def save_event_history():
-
-    try:
-
-        with open(
-            EVENT_LOG_FILE,
-            "w",
-            encoding="utf-8"
-        ) as f:
-
-            json.dump(
-                EVENT_HISTORY,
-                f,
-                indent=4
-            )
+        shutdown()
 
     except Exception as e:
 
-        print("History Save Error :", e)
+        log(f"Fatal Error : {e}")
 
-
-def log_video_event(
-    event,
-    nvr,
-    camera,
-    ip,
-    downtime=None
-):
-
-    EVENT_HISTORY.append({
-
-        "time": datetime.now().strftime(
-            "%Y-%m-%d %H:%M:%S"
-        ),
-
-        "event": event,
-
-        "nvr": nvr,
-
-        "camera": camera,
-
-        "ip": ip,
-
-        "downtime": downtime
-
-    })
-
-    if len(EVENT_HISTORY) > 5000:
-
-        EVENT_HISTORY.pop(0)
-
-    save_event_history()
+        shutdown()
 
 
 # ==========================================================
-# History Viewer
+# Export Functions
 # ==========================================================
 
-def print_recent_events(limit=20):
+__all__ = [
 
-    print("\n" + "=" * 70)
-    print("Recent Video Events")
-    print("=" * 70)
+    "start_video_monitor",
 
-    for event in EVENT_HISTORY[-limit:]:
+    "stop_video_monitor",
 
-        print(
-            f"{event['time']} | "
-            f"{event['event']} | "
-            f"{event['nvr']} | "
-            f"{event['camera']}"
-        )
+    "restart_video_monitor",
 
-    print("=" * 70)
+    "monitor_status",
 
+    "manual_scan",
 
-# ==========================================================
-# Enterprise Health Report
-# ==========================================================
+    "refresh_camera_cache",
 
-def print_health_report():
+    "get_statistics",
 
-    print("\n" + "=" * 70)
+    "get_event_history",
 
-    print("VisionGuard AI Health Report")
+    "clear_event_history",
 
-    print("=" * 70)
+    "health",
 
-    print(f"Total Cameras          : {len(CAMERA_STATUS)}")
-    print(f"Current Video Loss     : {len(LOSS_ALERT_SENT)}")
-    print(f"Video Loss Events      : {TOTAL_VIDEO_LOSS}")
-    print(f"Video Restore Events   : {TOTAL_VIDEO_RESTORED}")
-    print(f"History Records        : {len(EVENT_HISTORY)}")
+    "print_health"
 
-    print("=" * 70)
-# ==========================================================
-# Graceful Shutdown
-# ==========================================================
-
-def stop_video_monitor():
-
-    print("\n" + "=" * 70)
-    print("Stopping VisionGuard AI Video Monitor...")
-    print("=" * 70)
-
-    try:
-
-        print_health_report()
-
-        print_recent_events(10)
-
-    except Exception as e:
-
-        print("Shutdown Report Error :", e)
-
-    print("Video Monitor Stopped Successfully.")
+]
 
 
 # ==========================================================
-# Enterprise Startup
+# Banner
 # ==========================================================
 
-def start_enterprise_monitor():
+log("=" * 70)
 
-    print("=" * 70)
-    print("VisionGuard AI Enterprise Video Monitoring Engine")
-    print("=" * 70)
+log("VisionGuard AI Enterprise Video Monitor Loaded")
 
-    print(f"Loaded NVRs : {len(NVRS)}")
-    print(f"Check Interval : {CHECK_INTERVAL} Seconds")
-    print("Alert Engine : Enabled")
-    print("History Logger : Enabled")
-    print("Duplicate Protection : Enabled")
-    print("=" * 70)
-
-    start_video_monitor()
+log("=" * 70)
 
 
 # ==========================================================
-# Manual Test
+# Direct Run
 # ==========================================================
 
 if __name__ == "__main__":
 
-    try:
-
-        start_enterprise_monitor()
-
-        while True:
-
-            time.sleep(60)
-
-    except KeyboardInterrupt:
-
-        stop_video_monitor()
+    run()

@@ -1,4 +1,5 @@
 from .video_monitor import start_video_monitor
+from .hikvision_event_listener import start_listener
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
@@ -36,9 +37,14 @@ def startup():
     print("VisionGuard AI Starting...")
     print("=" * 60)
 
+    # Existing Video Monitor
     start_video_monitor()
 
+    # Hikvision Event Listener
+    start_listener()
+
     print("Video Monitor Started Successfully")
+    print("Video Loss Listener Started Successfully")
 
 @app.get("/")
 def home():

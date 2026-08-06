@@ -1069,5 +1069,61 @@
         "ip": "192.168.1.105",
         "status": "Recovered",
         "time": "04-08-2026 08:10:21 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 11:05:33 AM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 12:56:02 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 02:53:51 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 06:47:30 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 08:15:54 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "05-08-2026 08:37:03 PM"
+    },
+    {
+        "camera": "SRN   4",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.105",
+        "status": "Offline",
+        "time": "05-08-2026 08:47:37 PM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "06-08-2026 11:28:36 AM"
     }
 ]
