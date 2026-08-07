@@ -6,30 +6,16 @@ from email.mime.text import MIMEText
 from .config import EMAIL_BRAND
 
 # =====================================================
-# SMTP Configuration
+# VisionGuard AI Enterprise Email Service v4.0
 # =====================================================
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-# =====================================================
-# Sender Information
-# =====================================================
-
 SENDER_EMAIL = "Zubair.khan@1mg.com"
-
-# Gmail App Password
 APP_PASSWORD = "garajkqynquqccpe"
 
-# =====================================================
-# Receiver
-# =====================================================
-
 RECEIVER_EMAIL = "Zubair.khan@1mg.com"
-
-# =====================================================
-# HTML Templates
-# =====================================================
 
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 
@@ -41,16 +27,10 @@ def render_template(template_name: str, data: dict):
 
     template_path = TEMPLATE_DIR / template_name
 
-    with open(
-        template_path,
-        "r",
-        encoding="utf-8"
-    ) as f:
-
+    with open(template_path, "r", encoding="utf-8") as f:
         html = f.read()
 
     for key, value in data.items():
-
         html = html.replace(
             "{{" + key + "}}",
             str(value)
@@ -59,6 +39,27 @@ def render_template(template_name: str, data: dict):
     return html
 
 
+# =====================================================
+# Enterprise Logger
+# =====================================================
+
+def log_email_success(subject):
+
+    print("\n" + "=" * 70)
+    print("✅ EMAIL SENT")
+    print("=" * 70)
+    print(subject)
+    print("=" * 70)
+
+
+def log_email_failure(subject, error):
+
+    print("\n" + "=" * 70)
+    print("❌ EMAIL FAILED")
+    print("=" * 70)
+    print(subject)
+    print(error)
+    print("=" * 70)
 # =====================================================
 # Generic Enterprise HTML Email Sender
 # =====================================================
@@ -86,11 +87,10 @@ def send_html_email(
                 "status": status,
                 "issues": status,
                 "time": event_time,
-            },
+            }
         )
 
         msg = MIMEMultipart("alternative")
-
         msg["From"] = SENDER_EMAIL
         msg["To"] = RECEIVER_EMAIL
         msg["Subject"] = subject
@@ -98,191 +98,62 @@ def send_html_email(
         msg.attach(
             MIMEText(
                 html,
-                "html"
+                "html",
+                "utf-8"
             )
         )
 
-        server = smtplib.SMTP(
+        print("========== EMAIL DEBUG ==========")
+        print("Subject :", subject)
+        print("Template:", template_name)
+        print("From    :", SENDER_EMAIL)
+        print("To      :", RECEIVER_EMAIL)
+
+        with smtplib.SMTP(
             SMTP_SERVER,
-            SMTP_PORT
-        )
+            SMTP_PORT,
+            timeout=20
+        ) as server:
 
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
+            server.ehlo()
 
-        server.login(
-            SENDER_EMAIL,
-            APP_PASSWORD
-        )
+            server.starttls()
 
-        server.sendmail(
-            SENDER_EMAIL,
-            RECEIVER_EMAIL,
-            msg.as_string()
-        )
+            server.ehlo()
 
-        server.quit()
+            print("TLS OK")
 
-        print(f"✅ Email Sent : {subject}")
+            server.login(
+                SENDER_EMAIL,
+                APP_PASSWORD
+            )
+
+            print("LOGIN SUCCESS")
+
+            server.sendmail(
+                SENDER_EMAIL,
+                RECEIVER_EMAIL,
+                msg.as_string()
+            )
+
+            print("MAIL SENT SUCCESSFULLY")
+
+        log_email_success(subject)
 
         return True
 
     except Exception as e:
 
-        print("❌ Email Error :", e)
+        log_email_failure(
+            subject,
+            e
+        )
 
         return False
 
 
 # =====================================================
-# CAMERA OFFLINE EMAIL
-# =====================================================
-
-def send_offline_email(
-    camera,
-    nvr,
-    ip,
-    event_time
-):
-
-    return send_html_email(
-
-        subject=f"🔴 [{nvr}] Camera Offline - {camera}",
-
-        template_name="offline.html",
-
-        camera=camera,
-
-        nvr=nvr,
-
-        ip=ip,
-
-        status="OFFLINE",
-
-        event_time=event_time
-
-    )
-
-
-# =====================================================
-# CAMERA RECOVERY EMAIL
-# =====================================================
-
-def send_recovery_email(
-    camera,
-    nvr,
-    ip,
-    event_time
-):
-
-    return send_html_email(
-
-        subject=f"🟢 [{nvr}] Camera Recovered - {camera}",
-
-        template_name="recovery.html",
-
-        camera=camera,
-
-        nvr=nvr,
-
-        ip=ip,
-
-        status="ONLINE",
-
-        event_time=event_time
-
-    )
-
-
-# =====================================================
-# DEVICE IDENTITY EMAIL
-# =====================================================
-
-def send_identity_email(
-    camera,
-    nvr,
-    ip,
-    issues,
-    event_time
-):
-
-    return send_html_email(
-
-        subject=f"🚨 [{nvr}] Device Identity Changed - {camera}",
-
-        template_name="identity.html",
-
-        camera=camera,
-
-        nvr=nvr,
-
-        ip=ip,
-
-        status=issues,
-
-        event_time=event_time
-
-    )
-# =====================================================
-# IP CONFLICT EMAIL
-# =====================================================
-
-def send_ip_conflict_email(
-    camera,
-    nvr,
-    ip,
-    event_time
-):
-
-    return send_html_email(
-
-        subject=f"⚠️ [{nvr}] Duplicate IP Detected",
-
-        template_name="ip_conflict.html",
-
-        camera=camera,
-
-        nvr=nvr,
-
-        ip=ip,
-
-        status="Duplicate IP Detected",
-
-        event_time=event_time
-
-    )
-
-
-# =====================================================
-# IP CONFLICT RESOLVED EMAIL
-# =====================================================
-
-def send_ip_conflict_resolved_email(
-    event_time
-):
-
-    return send_html_email(
-
-        subject="✅ IP Conflict Resolved",
-
-        template_name="ip_conflict_resolved.html",
-
-        camera="All Monitored Cameras",
-
-        nvr="All Connected NVRs",
-
-        ip="No Duplicate IP Detected",
-
-        status="HEALTHY",
-
-        event_time=event_time
-
-    )
-
-
-# =====================================================
-# Enterprise Alert Helpers
+# Generic Warning Email
 # =====================================================
 
 def send_warning_email(
@@ -309,6 +180,150 @@ def send_warning_email(
         ip=ip,
 
         status=message,
+
+        event_time=event_time
+
+    )
+# =====================================================
+# CAMERA OFFLINE EMAIL
+# =====================================================
+
+def send_offline_email(
+    camera,
+    nvr,
+    ip,
+    event_time
+):
+
+    return send_warning_email(
+
+        subject=f"🔴 [{nvr}] Camera Offline - {camera}",
+
+        template_name="offline.html",
+
+        camera=camera,
+
+        nvr=nvr,
+
+        ip=ip,
+
+        message="Camera is Offline",
+
+        event_time=event_time
+
+    )
+
+
+# =====================================================
+# CAMERA RECOVERY EMAIL
+# =====================================================
+
+def send_recovery_email(
+    camera,
+    nvr,
+    ip,
+    event_time
+):
+
+    return send_warning_email(
+
+        subject=f"🟢 [{nvr}] Camera Recovered - {camera}",
+
+        template_name="recovery.html",
+
+        camera=camera,
+
+        nvr=nvr,
+
+        ip=ip,
+
+        message="Camera Restored Successfully",
+
+        event_time=event_time
+
+    )
+
+
+# =====================================================
+# DEVICE IDENTITY EMAIL
+# =====================================================
+
+def send_identity_email(
+    camera,
+    nvr,
+    ip,
+    issues,
+    event_time
+):
+
+    return send_warning_email(
+
+        subject=f"🚨 [{nvr}] Device Identity Changed - {camera}",
+
+        template_name="identity.html",
+
+        camera=camera,
+
+        nvr=nvr,
+
+        ip=ip,
+
+        message=issues,
+
+        event_time=event_time
+
+    )
+# =====================================================
+# IP CONFLICT EMAIL
+# =====================================================
+
+def send_ip_conflict_email(
+    camera,
+    nvr,
+    ip,
+    event_time
+):
+
+    return send_warning_email(
+
+        subject=f"⚠️ [{nvr}] Duplicate IP Detected",
+
+        template_name="ip_conflict.html",
+
+        camera=camera,
+
+        nvr=nvr,
+
+        ip=ip,
+
+        message="Duplicate IP Detected",
+
+        event_time=event_time
+
+    )
+
+
+# =====================================================
+# IP CONFLICT RESOLVED EMAIL
+# =====================================================
+
+def send_ip_conflict_resolved_email(
+    event_time
+):
+
+    return send_warning_email(
+
+        subject="✅ IP Conflict Resolved",
+
+        template_name="ip_conflict_resolved.html",
+
+        camera="All Monitored Cameras",
+
+        nvr="All Connected NVRs",
+
+        ip="-",
+
+        message="No Duplicate IP Detected",
 
         event_time=event_time
 
@@ -373,24 +388,57 @@ def send_video_restored_email(
         event_time=event_time
 
     )
-
-
 # =====================================================
-# STORAGE FAILURE EMAIL
+# RECORDING LOSS EMAIL
 # =====================================================
 
-def send_storage_failure_email(
+
+def send_recording_loss_email(
     camera,
     nvr,
     ip,
-    event_time
+    loss_from,
+    loss_to,
+    duration,
+):
+
+    print("######## send_recording_loss_email CALLED ########")
+
+    return send_warning_email(
+        subject=f"⛔ [{nvr}] Recording Loss - {camera}",
+        template_name="video_loss.html",
+        camera=camera,
+        nvr=nvr,
+        ip=ip,
+        message=(
+            f"Recording Interrupted\n\n"
+            f"Missing From : {loss_from}\n"
+            f"Missing To   : {loss_to}\n"
+            f"Duration     : {duration}"
+        ),
+        event_time=loss_from,
+    )
+
+
+# =====================================================
+# RECORDING RECOVERY EMAIL
+# =====================================================
+
+def send_recording_recovery_email(
+    camera,
+    nvr,
+    ip,
+    loss_from,
+    loss_to,
+    restored_at,
+    duration,
 ):
 
     return send_warning_email(
 
-        subject=f"💾 [{nvr}] Storage Failure",
+        subject=f"✅ [{nvr}] Recording Restored - {camera}",
 
-        template_name="storage_failure.html",
+        template_name="video_restored.html",
 
         camera=camera,
 
@@ -398,479 +446,14 @@ def send_storage_failure_email(
 
         ip=ip,
 
-        message="Storage Failure Detected",
+        message=(
+            f"Recording Restored\n\n"
+            f"Loss From : {loss_from}\n"
+            f"Loss To   : {loss_to}\n"
+            f"Recovered : {restored_at}\n"
+            f"Duration  : {duration}"
+        ),
 
-        event_time=event_time
-
-    )
-
-
-# =====================================================
-# NETWORK ISSUE EMAIL
-# =====================================================
-
-def send_network_issue_email(
-    camera,
-    nvr,
-    ip,
-    event_time
-):
-
-    return send_warning_email(
-
-        subject=f"🌐 [{nvr}] Network Issue",
-
-        template_name="network_issue.html",
-
-        camera=camera,
-
-        nvr=nvr,
-
-        ip=ip,
-
-        message="Network Connectivity Issue",
-
-        event_time=event_time
+        event_time=restored_at
 
     )
-# =====================================================
-# Enterprise Logging Helpers
-# =====================================================
-
-def log_email_success(subject):
-
-    print("\n" + "=" * 70)
-    print("✅ EMAIL DELIVERED")
-    print("=" * 70)
-    print("Subject :", subject)
-    print("=" * 70)
-
-
-def log_email_failure(subject, error):
-
-    print("\n" + "=" * 70)
-    print("❌ EMAIL DELIVERY FAILED")
-    print("=" * 70)
-    print("Subject :", subject)
-    print("Reason  :", error)
-    print("=" * 70)
-
-
-# =====================================================
-# Email Health Check
-# =====================================================
-
-def email_service_status():
-
-    return {
-        "smtp_server": SMTP_SERVER,
-        "smtp_port": SMTP_PORT,
-        "sender": SENDER_EMAIL,
-        "receiver": RECEIVER_EMAIL,
-        "brand": EMAIL_BRAND,
-        "status": "READY"
-    }
-
-
-# =====================================================
-# Supported Alerts
-# =====================================================
-
-SUPPORTED_ALERTS = [
-
-    "Camera Offline",
-
-    "Camera Recovery",
-
-    "Device Identity",
-
-    "IP Conflict",
-
-    "IP Conflict Resolved",
-
-    "Video Loss",
-
-    "Video Restored",
-
-    "Storage Failure",
-
-    "Network Failure",
-
-    "Camera Tampering",
-
-    "Power Failure",
-
-    "Analytics Report"
-
-]
-
-
-def get_supported_alerts():
-
-    return SUPPORTED_ALERTS.copy()
-
-
-# =====================================================
-# SMTP Test
-# =====================================================
-
-def test_email_connection():
-
-    try:
-
-        server = smtplib.SMTP(
-            SMTP_SERVER,
-            SMTP_PORT,
-            timeout=15
-        )
-
-        server.ehlo()
-
-        server.starttls()
-
-        server.ehlo()
-
-        server.login(
-            SENDER_EMAIL,
-            APP_PASSWORD
-        )
-
-        server.quit()
-
-        print("\n" + "=" * 70)
-        print("✅ SMTP CONNECTION SUCCESSFUL")
-        print("=" * 70)
-
-        return True
-
-    except Exception as e:
-
-        print("\n" + "=" * 70)
-        print("❌ SMTP CONNECTION FAILED")
-        print("=" * 70)
-        print(e)
-        print("=" * 70)
-
-        return False
-
-
-# =====================================================
-# Module Info
-# =====================================================
-
-__version__ = "3.0 Enterprise"
-
-__author__ = "VisionGuard AI"
-
-__module__ = "Enterprise Email Service"
-
-
-def get_email_service_info():
-
-    return {
-
-        "version": __version__,
-
-        "module": __module__,
-
-        "sender": SENDER_EMAIL,
-
-        "receiver": RECEIVER_EMAIL,
-
-        "smtp": SMTP_SERVER,
-
-        "port": SMTP_PORT,
-
-        "brand": EMAIL_BRAND,
-
-        "alerts": get_supported_alerts()
-
-    }
-
-
-# =====================================================
-# Test Console
-# =====================================================
-
-if __name__ == "__main__":
-
-    from datetime import datetime
-
-    print("\n" + "=" * 70)
-    print("VisionGuard AI Enterprise Email Test")
-    print("=" * 70)
-
-    info = get_email_service_info()
-
-    print("Version :", info["version"])
-    print("SMTP    :", info["smtp"])
-    print("Sender  :", info["sender"])
-    print("Receiver:", info["receiver"])
-    print("=" * 70)
-
-    if not test_email_connection():
-        exit()
-
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    TEST_CAMERA = "QC TABLE 01"
-    TEST_NVR = "NVR-01"
-    TEST_IP = "192.168.1.101"
-
-    send_offline_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_recovery_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_identity_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        "Serial Number Changed",
-        now
-    )
-
-    send_ip_conflict_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_ip_conflict_resolved_email(
-        now
-    )
-
-    send_video_loss_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_video_restored_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_storage_failure_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    send_network_issue_email(
-        TEST_CAMERA,
-        TEST_NVR,
-        TEST_IP,
-        now
-    )
-
-    print("\n" + "=" * 70)
-    print("✅ ALL TEST EMAILS SENT SUCCESSFULLY")
-    print("=" * 70)
-    # ==========================================================
-# VisionGuard AI Video Monitoring Emails
-# ==========================================================
-
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import smtplib
-
-from .config import (
-    SMTP_SERVER,
-    SMTP_PORT,
-    SMTP_USERNAME,
-    SMTP_PASSWORD,
-    RECEIVER_EMAIL,
-    APPLICATION_NAME
-)
-
-
-# ==========================================================
-# Internal Send Mail
-# ==========================================================
-
-def _send(subject, html):
-
-    try:
-
-        msg = MIMEMultipart("alternative")
-
-        msg["Subject"] = subject
-        msg["From"] = SMTP_USERNAME
-        msg["To"] = RECEIVER_EMAIL
-
-        msg.attach(
-            MIMEText(html, "html")
-        )
-
-        server = smtplib.SMTP(
-            SMTP_SERVER,
-            SMTP_PORT
-        )
-
-        server.starttls()
-
-        server.login(
-            SMTP_USERNAME,
-            SMTP_PASSWORD
-        )
-
-        server.send_message(msg)
-
-        server.quit()
-
-        print("✅ Email Sent :", subject)
-
-    except Exception as e:
-
-        print("❌ Email Error :", e)
-
-
-# ==========================================================
-# Video Loss Email
-# ==========================================================
-
-def send_video_loss_email(
-
-    camera,
-    nvr,
-    ip,
-    event_time
-
-):
-
-    subject = f"🚨 VIDEO LOSS - {camera}"
-
-    html = f"""
-    <html>
-
-    <body style="font-family:Arial;background:#f5f5f5;padding:30px;">
-
-    <div style="background:white;padding:30px;border-radius:10px;">
-
-    <h2 style="color:red;">
-    🚨 VisionGuard AI
-    </h2>
-
-    <h3>Video Stream Lost</h3>
-
-    <table cellpadding="8">
-
-    <tr>
-    <td><b>Camera</b></td>
-    <td>{camera}</td>
-    </tr>
-
-    <tr>
-    <td><b>NVR</b></td>
-    <td>{nvr}</td>
-    </tr>
-
-    <tr>
-    <td><b>IP</b></td>
-    <td>{ip}</td>
-    </tr>
-
-    <tr>
-    <td><b>Time</b></td>
-    <td>{event_time}</td>
-    </tr>
-
-    </table>
-
-    <br>
-
-    <span style="color:red;font-size:18px;">
-    Video Stream Not Available
-    </span>
-
-    </div>
-
-    </body>
-
-    </html>
-    """
-
-    _send(subject, html)
-
-
-# ==========================================================
-# Video Restored Email
-# ==========================================================
-
-def send_video_restored_email(
-
-    camera,
-    nvr,
-    ip,
-    event_time
-
-):
-
-    subject = f"✅ VIDEO RESTORED - {camera}"
-
-    html = f"""
-    <html>
-
-    <body style="font-family:Arial;background:#f5f5f5;padding:30px;">
-
-    <div style="background:white;padding:30px;border-radius:10px;">
-
-    <h2 style="color:green;">
-    ✅ VisionGuard AI
-    </h2>
-
-    <h3>Video Stream Restored</h3>
-
-    <table cellpadding="8">
-
-    <tr>
-    <td><b>Camera</b></td>
-    <td>{camera}</td>
-    </tr>
-
-    <tr>
-    <td><b>NVR</b></td>
-    <td>{nvr}</td>
-    </tr>
-
-    <tr>
-    <td><b>IP</b></td>
-    <td>{ip}</td>
-    </tr>
-
-    <tr>
-    <td><b>Time</b></td>
-    <td>{event_time}</td>
-    </tr>
-
-    </table>
-
-    <br>
-
-    <span style="color:green;font-size:18px;">
-    Video Stream Restored Successfully
-    </span>
-
-    </div>
-
-    </body>
-
-    </html>
-    """
-
-    _send(subject, html)

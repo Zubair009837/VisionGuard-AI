@@ -1125,5 +1125,1286 @@
         "ip": "192.168.1.111",
         "status": "Offline",
         "time": "06-08-2026 11:28:36 AM"
+    },
+    {
+        "camera": "SRN  6",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.111",
+        "status": "Offline",
+        "time": "07-08-2026 10:35:27 AM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "NVR: NVR-4\nCamera: IN    R5\nChannel: 1\nRecording Lost From: 07-08-2026 03:51:24 PM\nCurrent Duration: 1m 29s",
+        "time": "07-08-2026 03:52:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "NVR: NVR-4\nCamera: Camera 01\nChannel: 2\nRecording Lost From: 07-08-2026 03:51:26 PM\nCurrent Duration: 1m 27s",
+        "time": "07-08-2026 03:52:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "NVR: NVR-4\nCamera: IN   Q1\nChannel: 4\nRecording Lost From: 07-08-2026 03:51:27 PM\nCurrent Duration: 1m 27s",
+        "time": "07-08-2026 03:52:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "NVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\nRecording Lost From: 07-08-2026 03:51:27 PM\nCurrent Duration: 1m 27s",
+        "time": "07-08-2026 03:52:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "NVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\nRecording Lost From: 07-08-2026 03:51:25 PM\nCurrent Duration: 1m 29s",
+        "time": "07-08-2026 03:52:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "NVR: NVR-4\nCamera: IN    V1\nChannel: 7\nRecording Lost From: 07-08-2026 03:51:28 PM\nCurrent Duration: 1m 26s",
+        "time": "07-08-2026 03:52:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "NVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\nRecording Lost From: 07-08-2026 03:51:28 PM\nCurrent Duration: 1m 26s",
+        "time": "07-08-2026 03:52:55 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "NVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\nRecording Lost From: 07-08-2026 03:52:22 PM\nCurrent Duration: 1m 27s",
+        "time": "07-08-2026 03:53:49 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V4",
+        "description": "NVR: NVR-5\nCamera: IN    V4\nChannel: 22\nRecording Lost From: 07-08-2026 03:52:12 PM\nCurrent Duration: 1m 46s",
+        "time": "07-08-2026 03:53:58 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SECURITY DESK 2",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SECURITY DESK 2\nChannel: 27\n\nLoss From: 07-08-2026 04:15:30 PM\nDuration: 1m 59s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:17:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - CAFFETERIA  2",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: CAFFETERIA  2\nChannel: 28\n\nLoss From: 07-08-2026 04:15:30 PM\nDuration: 2m 0s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:17:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nLoss From: 07-08-2026 04:16:07 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:17:34 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nLoss From: 07-08-2026 04:21:14 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:43 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nLoss From: 07-08-2026 04:21:17 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:43 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nLoss From: 07-08-2026 04:21:16 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:44 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nLoss From: 07-08-2026 04:21:17 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:44 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nLoss From: 07-08-2026 04:21:13 PM\nDuration: 1m 31s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:44 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nLoss From: 07-08-2026 04:21:17 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:44 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nLoss From: 07-08-2026 04:21:18 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:45 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nLoss From: 07-08-2026 04:21:18 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:22:45 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 04:27:41 PM\nMissing To: 07-08-2026 04:29:09 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:09 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 04:27:43 PM\nMissing To: 07-08-2026 04:29:09 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:09 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 04:27:42 PM\nMissing To: 07-08-2026 04:29:10 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 04:27:43 PM\nMissing To: 07-08-2026 04:29:10 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 04:27:43 PM\nMissing To: 07-08-2026 04:29:10 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 04:27:41 PM\nMissing To: 07-08-2026 04:29:11 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 04:27:44 PM\nMissing To: 07-08-2026 04:29:11 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 04:27:41 PM\nMissing To: 07-08-2026 04:29:11 PM\nDuration: 1m 30s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BAR CODE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: BAR CODE\nChannel: 9\n\nMissing From: 07-08-2026 04:27:06 PM\nMissing To: 07-08-2026 04:29:14 PM\nDuration: 2m 8s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:14 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 11\n\nMissing From: 07-08-2026 04:27:10 PM\nMissing To: 07-08-2026 04:29:15 PM\nDuration: 2m 4s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V3",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V3\nChannel: 12\n\nMissing From: 07-08-2026 04:27:10 PM\nMissing To: 07-08-2026 04:29:15 PM\nDuration: 2m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:29:15 PM"
+    },
+    {
+        "type": "RECORDING RECOVERY",
+        "severity": "INFO",
+        "title": "Recording Restored - BAR CODE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: BAR CODE\n\nLoss From: 07-08-2026 04:27:06 PM\nLoss To:   07-08-2026 04:30:14 PM\nDuration:  3m 8s\n\nStatus: RECORDING RESTORED",
+        "time": "07-08-2026 04:30:14 PM"
+    },
+    {
+        "type": "RECORDING RECOVERY",
+        "severity": "INFO",
+        "title": "Recording Restored - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\n\nLoss From: 07-08-2026 04:27:10 PM\nLoss To:   07-08-2026 04:30:14 PM\nDuration:  3m 4s\n\nStatus: RECORDING RESTORED",
+        "time": "07-08-2026 04:30:14 PM"
+    },
+    {
+        "type": "RECORDING RECOVERY",
+        "severity": "INFO",
+        "title": "Recording Restored - IN    V3",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V3\n\nLoss From: 07-08-2026 04:27:10 PM\nLoss To:   07-08-2026 04:30:15 PM\nDuration:  3m 5s\n\nStatus: RECORDING RESTORED",
+        "time": "07-08-2026 04:30:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 04:37:12 PM\nMissing To: 07-08-2026 04:38:38 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 04:37:13 PM\nMissing To: 07-08-2026 04:38:39 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 04:37:11 PM\nMissing To: 07-08-2026 04:38:39 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 04:37:12 PM\nMissing To: 07-08-2026 04:38:39 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 04:37:08 PM\nMissing To: 07-08-2026 04:38:40 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 04:37:13 PM\nMissing To: 07-08-2026 04:38:40 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 04:37:13 PM\nMissing To: 07-08-2026 04:38:40 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 04:37:07 PM\nMissing To: 07-08-2026 04:38:40 PM\nDuration: 1m 33s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 04:38:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 05:23:03 PM\nMissing To: 07-08-2026 05:24:31 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 05:23:05 PM\nMissing To: 07-08-2026 05:24:31 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 05:23:05 PM\nMissing To: 07-08-2026 05:24:32 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 05:23:05 PM\nMissing To: 07-08-2026 05:24:32 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 05:23:00 PM\nMissing To: 07-08-2026 05:24:32 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:33 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 05:23:05 PM\nMissing To: 07-08-2026 05:24:33 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:33 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 05:23:07 PM\nMissing To: 07-08-2026 05:24:33 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:33 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 05:23:03 PM\nMissing To: 07-08-2026 05:24:33 PM\nDuration: 1m 30s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:24:33 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN\nChannel: 22\n\nMissing From: 07-08-2026 05:24:21 PM\nMissing To: 07-08-2026 05:25:25 PM\nDuration: 1m 4s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:25 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - LOGISTICK",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: LOGISTICK\nChannel: 26\n\nMissing From: 07-08-2026 05:24:19 PM\nMissing To: 07-08-2026 05:25:26 PM\nDuration: 1m 7s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:27 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SECURITY DESK 2",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SECURITY DESK 2\nChannel: 27\n\nMissing From: 07-08-2026 05:24:24 PM\nMissing To: 07-08-2026 05:25:27 PM\nDuration: 1m 3s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:27 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    Q5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    Q5\nChannel: 17\n\nMissing From: 07-08-2026 05:23:47 PM\nMissing To: 07-08-2026 05:25:37 PM\nDuration: 1m 50s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:38 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   U1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   U1\nChannel: 18\n\nMissing From: 07-08-2026 05:23:47 PM\nMissing To: 07-08-2026 05:25:38 PM\nDuration: 1m 51s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:38 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 19\n\nMissing From: 07-08-2026 05:23:47 PM\nMissing To: 07-08-2026 05:25:38 PM\nDuration: 1m 51s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 21\n\nMissing From: 07-08-2026 05:23:49 PM\nMissing To: 07-08-2026 05:25:39 PM\nDuration: 1m 50s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:25:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 05:26:23 PM\nMissing To: 07-08-2026 05:27:53 PM\nDuration: 1m 30s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 05:26:25 PM\nMissing To: 07-08-2026 05:27:53 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 05:26:26 PM\nMissing To: 07-08-2026 05:27:53 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 05:26:27 PM\nMissing To: 07-08-2026 05:27:53 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 05:26:23 PM\nMissing To: 07-08-2026 05:27:54 PM\nDuration: 1m 31s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 05:26:26 PM\nMissing To: 07-08-2026 05:27:54 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 05:26:26 PM\nMissing To: 07-08-2026 05:27:54 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 05:26:22 PM\nMissing To: 07-08-2026 05:27:54 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:27:54 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - COLD ROOM",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: COLD ROOM\nChannel: 8\n\nMissing From: 07-08-2026 05:25:43 PM\nMissing To: 07-08-2026 05:28:00 PM\nDuration: 2m 17s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:28:00 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BAR CODE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: BAR CODE\nChannel: 9\n\nMissing From: 07-08-2026 05:25:39 PM\nMissing To: 07-08-2026 05:28:00 PM\nDuration: 2m 21s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:28:01 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 11\n\nMissing From: 07-08-2026 05:25:43 PM\nMissing To: 07-08-2026 05:28:01 PM\nDuration: 2m 18s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:28:01 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN  5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN  5\nChannel: 17\n\nMissing From: 07-08-2026 05:28:41 PM\nMissing To: 07-08-2026 05:29:47 PM\nDuration: 1m 6s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:29:47 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - INBOUND LOBBY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: INBOUND LOBBY\nChannel: 20\n\nMissing From: 07-08-2026 05:28:44 PM\nMissing To: 07-08-2026 05:29:49 PM\nDuration: 1m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:29:50 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN\nChannel: 22\n\nMissing From: 07-08-2026 05:28:39 PM\nMissing To: 07-08-2026 05:29:50 PM\nDuration: 1m 11s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:29:51 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - OUTDOOR  1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: OUTDOOR  1\nChannel: 25\n\nMissing From: 07-08-2026 05:28:46 PM\nMissing To: 07-08-2026 05:29:52 PM\nDuration: 1m 6s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:29:52 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - LOGISTICK",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: LOGISTICK\nChannel: 26\n\nMissing From: 07-08-2026 05:28:45 PM\nMissing To: 07-08-2026 05:29:52 PM\nDuration: 1m 7s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:29:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 05:29:01 PM\nMissing To: 07-08-2026 05:30:30 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 05:29:03 PM\nMissing To: 07-08-2026 05:30:30 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 05:29:04 PM\nMissing To: 07-08-2026 05:30:31 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 05:29:03 PM\nMissing To: 07-08-2026 05:30:31 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 05:29:00 PM\nMissing To: 07-08-2026 05:30:31 PM\nDuration: 1m 31s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 05:29:02 PM\nMissing To: 07-08-2026 05:30:31 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 05:29:04 PM\nMissing To: 07-08-2026 05:30:32 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 05:29:01 PM\nMissing To: 07-08-2026 05:30:32 PM\nDuration: 1m 31s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:30:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN 1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN 1\nChannel: 1\n\nMissing From: 07-08-2026 05:33:07 PM\nMissing To: 07-08-2026 05:34:07 PM\nDuration: 1m 0s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:34:08 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - NVR 10 Cam 121   QC&PACKING",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: NVR 10 Cam 121   QC&PACKING\nChannel: 5\n\nMissing From: 07-08-2026 05:33:04 PM\nMissing To: 07-08-2026 05:34:09 PM\nDuration: 1m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:34:09 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - LOGISTICK",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: LOGISTICK\nChannel: 16\n\nMissing From: 07-08-2026 05:35:06 PM\nMissing To: 07-08-2026 05:36:11 PM\nDuration: 1m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:36:12 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN  5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN  5\nChannel: 17\n\nMissing From: 07-08-2026 05:35:05 PM\nMissing To: 07-08-2026 05:36:12 PM\nDuration: 1m 7s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:36:13 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - CAFFETERIA 1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: CAFFETERIA 1\nChannel: 19\n\nMissing From: 07-08-2026 05:35:08 PM\nMissing To: 07-08-2026 05:36:13 PM\nDuration: 1m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:36:13 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 05:51:13 PM\nMissing To: 07-08-2026 05:52:39 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 05:51:13 PM\nMissing To: 07-08-2026 05:52:40 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 05:51:13 PM\nMissing To: 07-08-2026 05:52:40 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 05:51:14 PM\nMissing To: 07-08-2026 05:52:40 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:40 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 05:51:08 PM\nMissing To: 07-08-2026 05:52:40 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 05:51:14 PM\nMissing To: 07-08-2026 05:52:41 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 05:51:15 PM\nMissing To: 07-08-2026 05:52:41 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 05:51:13 PM\nMissing To: 07-08-2026 05:52:41 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:52:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 05:51:42 PM\nMissing To: 07-08-2026 05:53:10 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 05:51:43 PM\nMissing To: 07-08-2026 05:53:10 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 05:51:43 PM\nMissing To: 07-08-2026 05:53:10 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 05:51:44 PM\nMissing To: 07-08-2026 05:53:10 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:10 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 05:51:38 PM\nMissing To: 07-08-2026 05:53:10 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 05:51:42 PM\nMissing To: 07-08-2026 05:53:11 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 05:51:45 PM\nMissing To: 07-08-2026 05:53:11 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:11 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 05:51:37 PM\nMissing To: 07-08-2026 05:53:11 PM\nDuration: 1m 34s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:53:12 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BAR CODE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: BAR CODE\nChannel: 9\n\nMissing From: 07-08-2026 05:52:17 PM\nMissing To: 07-08-2026 05:54:14 PM\nDuration: 1m 57s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:54:14 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 11\n\nMissing From: 07-08-2026 05:52:24 PM\nMissing To: 07-08-2026 05:54:14 PM\nDuration: 1m 50s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:54:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V3",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V3\nChannel: 12\n\nMissing From: 07-08-2026 05:52:23 PM\nMissing To: 07-08-2026 05:54:15 PM\nDuration: 1m 52s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:54:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 15\n\nMissing From: 07-08-2026 05:56:18 PM\nMissing To: 07-08-2026 05:58:09 PM\nDuration: 1m 51s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:09 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    Q5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    Q5\nChannel: 17\n\nMissing From: 07-08-2026 05:56:17 PM\nMissing To: 07-08-2026 05:58:12 PM\nDuration: 1m 55s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:12 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   U1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   U1\nChannel: 18\n\nMissing From: 07-08-2026 05:56:18 PM\nMissing To: 07-08-2026 05:58:12 PM\nDuration: 1m 54s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:13 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 19\n\nMissing From: 07-08-2026 05:56:18 PM\nMissing To: 07-08-2026 05:58:13 PM\nDuration: 1m 55s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:13 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 21\n\nMissing From: 07-08-2026 05:56:19 PM\nMissing To: 07-08-2026 05:58:13 PM\nDuration: 1m 54s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:14 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    W1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    W1\nChannel: 23\n\nMissing From: 07-08-2026 05:56:18 PM\nMissing To: 07-08-2026 05:58:14 PM\nDuration: 1m 56s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   R8",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   R8\nChannel: 24\n\nMissing From: 07-08-2026 05:56:19 PM\nMissing To: 07-08-2026 05:58:15 PM\nDuration: 1m 56s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:15 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   O8",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   O8\nChannel: 25\n\nMissing From: 07-08-2026 05:56:19 PM\nMissing To: 07-08-2026 05:58:15 PM\nDuration: 1m 56s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:16 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - COLD ROOM",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: COLD ROOM\nChannel: 26\n\nMissing From: 07-08-2026 05:56:20 PM\nMissing To: 07-08-2026 05:58:16 PM\nDuration: 1m 56s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 05:58:16 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - QR GENERATE AREA",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: QR GENERATE AREA\nChannel: 2\n\nMissing From: 07-08-2026 05:58:13 PM\nMissing To: 07-08-2026 06:00:04 PM\nDuration: 1m 51s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:00:05 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PRD AREA",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: PRD AREA\nChannel: 3\n\nMissing From: 07-08-2026 05:58:14 PM\nMissing To: 07-08-2026 06:00:05 PM\nDuration: 1m 51s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:00:05 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PO OFFICE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: PO OFFICE\nChannel: 4\n\nMissing From: 07-08-2026 05:58:09 PM\nMissing To: 07-08-2026 06:00:05 PM\nDuration: 1m 56s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:00:06 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PV AREA",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: PV AREA\nChannel: 6\n\nMissing From: 07-08-2026 05:58:18 PM\nMissing To: 07-08-2026 06:00:06 PM\nDuration: 1m 48s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:00:07 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 06:00:14 PM\nMissing To: 07-08-2026 06:01:41 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:01:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 06:00:15 PM\nMissing To: 07-08-2026 06:01:41 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:01:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 06:00:14 PM\nMissing To: 07-08-2026 06:01:42 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:01:42 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V3",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V3\nChannel: 12\n\nMissing From: 07-08-2026 06:00:11 PM\nMissing To: 07-08-2026 06:01:46 PM\nDuration: 1m 35s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:01:46 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 13\n\nMissing From: 07-08-2026 06:00:11 PM\nMissing To: 07-08-2026 06:01:46 PM\nDuration: 1m 35s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:01:47 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - NVR 10 Cam 121   QC&PACKING",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: NVR 10 Cam 121   QC&PACKING\nChannel: 5\n\nMissing From: 07-08-2026 06:05:27 PM\nMissing To: 07-08-2026 06:07:04 PM\nDuration: 1m 37s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:07:04 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 06:05:51 PM\nMissing To: 07-08-2026 06:07:19 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:07:19 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 06:05:55 PM\nMissing To: 07-08-2026 06:07:23 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:07:24 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V3",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V3\nChannel: 12\n\nMissing From: 07-08-2026 06:06:22 PM\nMissing To: 07-08-2026 06:07:31 PM\nDuration: 1m 9s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:07:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 06:06:59 PM\nMissing To: 07-08-2026 06:08:27 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:27 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 06:07:04 PM\nMissing To: 07-08-2026 06:08:31 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:31 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 06:07:09 PM\nMissing To: 07-08-2026 06:08:35 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:35 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 06:07:08 PM\nMissing To: 07-08-2026 06:08:39 PM\nDuration: 1m 31s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 06:07:14 PM\nMissing To: 07-08-2026 06:08:43 PM\nDuration: 1m 29s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:43 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 06:07:20 PM\nMissing To: 07-08-2026 06:08:47 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:08:47 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: Camera 01\nChannel: 21\n\nMissing From: 07-08-2026 06:07:59 PM\nMissing To: 07-08-2026 06:08:59 PM\nDuration: 1m 0s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:09:00 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V4",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    V4\nChannel: 22\n\nMissing From: 07-08-2026 06:06:46 PM\nMissing To: 07-08-2026 06:09:04 PM\nDuration: 2m 18s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:09:04 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 06:39:59 PM\nMissing To: 07-08-2026 06:41:26 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:26 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 06:40:03 PM\nMissing To: 07-08-2026 06:41:30 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 06:40:06 PM\nMissing To: 07-08-2026 06:41:33 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:34 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 06:40:11 PM\nMissing To: 07-08-2026 06:41:37 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:38 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 06:40:08 PM\nMissing To: 07-08-2026 06:41:41 PM\nDuration: 1m 33s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:42 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 06:40:18 PM\nMissing To: 07-08-2026 06:41:45 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:46 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 06:40:22 PM\nMissing To: 07-08-2026 06:41:49 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:49 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 06:40:20 PM\nMissing To: 07-08-2026 06:41:53 PM\nDuration: 1m 33s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:41:53 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    X1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN    X1\nChannel: 16\n\nMissing From: 07-08-2026 06:41:25 PM\nMissing To: 07-08-2026 06:43:02 PM\nDuration: 1m 37s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:43:02 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   U1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   U1\nChannel: 18\n\nMissing From: 07-08-2026 06:41:27 PM\nMissing To: 07-08-2026 06:43:08 PM\nDuration: 1m 41s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:43:08 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - NVR 10 Cam 121   QC&PACKING",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: NVR 10 Cam 121   QC&PACKING\nChannel: 5\n\nMissing From: 07-08-2026 06:43:42 PM\nMissing To: 07-08-2026 06:44:47 PM\nDuration: 1m 5s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:44:47 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: Camera 01\nChannel: 9\n\nMissing From: 07-08-2026 06:43:48 PM\nMissing To: 07-08-2026 06:44:51 PM\nDuration: 1m 3s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:44:51 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   R8",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   R8\nChannel: 24\n\nMissing From: 07-08-2026 06:47:31 PM\nMissing To: 07-08-2026 06:48:54 PM\nDuration: 1m 23s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:48:55 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   O8",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   O8\nChannel: 25\n\nMissing From: 07-08-2026 06:47:31 PM\nMissing To: 07-08-2026 06:48:58 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:49:00 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - COLD ROOM",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: COLD ROOM\nChannel: 26\n\nMissing From: 07-08-2026 06:47:38 PM\nMissing To: 07-08-2026 06:49:04 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:49:04 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    R5\nChannel: 1\n\nMissing From: 07-08-2026 06:55:57 PM\nMissing To: 07-08-2026 06:57:25 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:57:26 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IPCamera 04\nChannel: 5\n\nMissing From: 07-08-2026 06:56:01 PM\nMissing To: 07-08-2026 06:57:29 PM\nDuration: 1m 28s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:57:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: AMAZON TABLE\nChannel: 6\n\nMissing From: 07-08-2026 06:56:06 PM\nMissing To: 07-08-2026 06:57:33 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:57:34 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN    V1\nChannel: 7\n\nMissing From: 07-08-2026 06:56:11 PM\nMissing To: 07-08-2026 06:57:37 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:57:37 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: PR FRONT GATE\nChannel: 8\n\nMissing From: 07-08-2026 06:56:09 PM\nMissing To: 07-08-2026 06:57:41 PM\nDuration: 1m 32s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:57:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: Camera 01\nChannel: 2\n\nMissing From: 07-08-2026 06:57:15 PM\nMissing To: 07-08-2026 06:58:42 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:58:42 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: BULK GALLERY\nChannel: 3\n\nMissing From: 07-08-2026 06:57:19 PM\nMissing To: 07-08-2026 06:58:45 PM\nDuration: 1m 26s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:58:46 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-4\nCamera: IN   Q1\nChannel: 4\n\nMissing From: 07-08-2026 06:57:22 PM\nMissing To: 07-08-2026 06:58:49 PM\nDuration: 1m 27s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 06:58:49 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   O8",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: IN   O8\nChannel: 25\n\nMissing From: 07-08-2026 07:04:02 PM\nMissing To: 07-08-2026 07:05:25 PM\nDuration: 1m 23s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 07:05:25 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - COLD ROOM",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-5\nCamera: COLD ROOM\nChannel: 26\n\nMissing From: 07-08-2026 07:04:06 PM\nMissing To: 07-08-2026 07:05:29 PM\nDuration: 1m 23s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 07:05:29 PM"
+    },
+    {
+        "camera": "SRN",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.115",
+        "status": "Offline",
+        "time": "07-08-2026 07:05:58 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - SRN",
+        "description": "\ud83d\udd34 RECORDING LOSS\n\nNVR: NVR-2\nCamera: SRN\nChannel: 22\n\nMissing From: 07-08-2026 07:04:35 PM\nMissing To: 07-08-2026 07:06:16 PM\nDuration: 1m 41s\n\nStatus: RECORDING LOST",
+        "time": "07-08-2026 07:06:17 PM"
+    },
+    {
+        "camera": "SRN",
+        "nvr": "NVR-2",
+        "ip": "192.168.1.115",
+        "status": "Recovered",
+        "time": "07-08-2026 07:07:58 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    R5",
+        "description": "NVR : NVR-4\nCamera : IN    R5\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:30 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "NVR : NVR-4\nCamera : Camera 01\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:34 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - BULK GALLERY",
+        "description": "NVR : NVR-4\nCamera : BULK GALLERY\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:39 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN   Q1",
+        "description": "NVR : NVR-4\nCamera : IN   Q1\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:43 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IPCamera 04",
+        "description": "NVR : NVR-4\nCamera : IPCamera 04\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:47 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - AMAZON TABLE",
+        "description": "NVR : NVR-4\nCamera : AMAZON TABLE\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:52 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - IN    V1",
+        "description": "NVR : NVR-4\nCamera : IN    V1\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:56 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PR FRONT GATE",
+        "description": "NVR : NVR-4\nCamera : PR FRONT GATE\nIP : 192.168.1.4\nRecording Missing",
+        "time": "07-08-2026 07:14:59 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - QC TABLE 1",
+        "description": "NVR : NVR-3\nCamera : QC TABLE 1\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:23:24 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PROCESSING 1",
+        "description": "NVR : NVR-3\nCamera : PROCESSING 1\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:23:29 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - QC TABLE 7",
+        "description": "NVR : NVR-3\nCamera : QC TABLE 7\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:23:33 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "NVR : NVR-3\nCamera : Camera 01\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:23:37 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - B2B GALLERY",
+        "description": "NVR : NVR-3\nCamera : B2B GALLERY\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:23:41 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - QC TABLE 1",
+        "description": "NVR : NVR-3\nCamera : QC TABLE 1\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:16 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PROCESSING 1",
+        "description": "NVR : NVR-3\nCamera : PROCESSING 1\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:20 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - QC TABLE 7",
+        "description": "NVR : NVR-3\nCamera : QC TABLE 7\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:24 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - Camera 01",
+        "description": "NVR : NVR-3\nCamera : Camera 01\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:28 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - B2B GALLERY",
+        "description": "NVR : NVR-3\nCamera : B2B GALLERY\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:32 PM"
+    },
+    {
+        "type": "RECORDING LOSS",
+        "severity": "CRITICAL",
+        "title": "Recording Loss - PROCESSNG 2",
+        "description": "NVR : NVR-3\nCamera : PROCESSNG 2\nIP : 192.168.1.5\nRecording Missing",
+        "time": "07-08-2026 07:35:36 PM"
     }
 ]

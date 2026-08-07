@@ -1,11 +1,5 @@
 from .video_monitor import start_video_monitor
 from .hikvision_event_listener import start_listener
-from .recording_monitor import start_recording_monitor
-from .recording_monitor import (
-    get_recording_loss_history,
-    get_active_recording_losses,
-)
-
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
@@ -20,12 +14,9 @@ from .config import NVRS
 import requests
 from requests.auth import HTTPDigestAuth
 
-
 app = FastAPI(title="VisionGuard AI")
 
-
 Base.metadata.create_all(bind=engine)
-
 
 app.add_middleware(
     CORSMiddleware,
@@ -34,7 +25,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # ==========================================================
 # Startup
@@ -53,106 +43,49 @@ def startup():
     # Hikvision Event Listener
     start_listener()
 
-    # Recording Loss Monitor
-    start_recording_monitor()
-
     print("Video Monitor Started Successfully")
     print("Video Loss Listener Started Successfully")
-    print("Recording Loss Monitor Started Successfully")
-
-
-# ==========================================================
-# Home
-# ==========================================================
 
 @app.get("/")
 def home():
-
     return {
         "message": "VisionGuard AI Backend Running"
     }
 
 
-# ==========================================================
-# Health
-# ==========================================================
-
 @app.get("/health")
 def health():
-
     return {
         "status": "UP"
     }
 
 
-# ==========================================================
-# Dashboard
-# ==========================================================
-
 @app.get("/dashboard")
-def dashboard(
-    db: Session = Depends(get_db)
-):
+def dashboard(db: Session = Depends(get_db)):
 
     cameras = crud.get_cameras(db)
 
     total = len(cameras)
-
-    online = len(
-        [
-            c
-            for c in cameras
-            if c["status"] == "Online"
-        ]
-    )
-
+    online = len([c for c in cameras if c["status"] == "Online"])
     offline = total - online
 
     return {
-
         "total": total,
-
         "online": online,
-
         "offline": offline,
-
         "nvr": len(NVRS)
     }
 
 
-# ==========================================================
-# Cameras
-# ==========================================================
-
-@app.get(
-    "/cameras",
-    response_model=list[CameraResponse]
-)
-def get_cameras(
-    db: Session = Depends(get_db)
-):
-
+@app.get("/cameras", response_model=list[CameraResponse])
+def get_cameras(db: Session = Depends(get_db)):
     return crud.get_cameras(db)
 
 
-@app.post(
-    "/cameras",
-    response_model=CameraResponse
-)
-def create_camera(
-    camera: CameraCreate,
-    db: Session = Depends(get_db)
-):
+@app.post("/cameras", response_model=CameraResponse)
+def create_camera(camera: CameraCreate, db: Session = Depends(get_db)):
+    return crud.create_camera(db, camera)
 
-    return crud.create_camera(
-        db,
-        camera
-    )
-
-
-# ==========================================================
-# NVR Status
-# ==========================================================
 
 @app.get("/nvr/status")
 def nvr_status():
@@ -164,80 +97,49 @@ def nvr_status():
         try:
 
             response = requests.get(
-
                 f"http://{nvr['ip']}:{nvr['port']}",
-
                 auth=HTTPDigestAuth(
                     nvr["username"],
                     nvr["password"]
                 ),
-
                 timeout=5
             )
 
             if response.status_code in [200, 401]:
-
                 status = "ONLINE"
-
             else:
-
                 status = "OFFLINE"
 
         except Exception:
-
             status = "OFFLINE"
 
         result.append({
-
-            "name":
-                nvr["name"],
-
-            "ip":
-                nvr["ip"],
-
-            "port":
-                nvr["port"],
-
-            "status":
-                status
+            "name": nvr["name"],
+            "ip": nvr["ip"],
+            "port": nvr["port"],
+            "status": status
         })
 
     return result
 
 
-# ==========================================================
-# NVR Raw
-# ==========================================================
-
-@app.get(
-    "/nvr/raw",
-    response_class=PlainTextResponse
-)
+@app.get("/nvr/raw", response_class=PlainTextResponse)
 def nvr_raw():
 
     output = ""
 
     for nvr in NVRS:
 
-        output += (
-            f"\n========== "
-            f"{nvr['name']} "
-            f"==========\n"
-        )
+        output += f"\n========== {nvr['name']} ==========\n"
 
         try:
 
             response = requests.get(
-
-                f"http://{nvr['ip']}:{nvr['port']}"
-                f"/ISAPI/ContentMgmt/"
-                f"InputProxy/channels",
-
+                f"http://{nvr['ip']}:{nvr['port']}/ISAPI/ContentMgmt/InputProxy/channels",
                 auth=HTTPDigestAuth(
                     nvr["username"],
                     nvr["password"]
                 ),
-
                 timeout=10
             )
 
@@ -248,20 +150,3 @@ def nvr_raw():
             output += str(e)
 
     return output
-
-
-# ==========================================================
-# Recording Loss
-# ==========================================================
-
-@app.get("/recording-loss")
-def recording_loss():
-
-    return {
-
-        "active":
-            get_active_recording_losses(),
-
-        "history":
-            get_recording_loss_history()
-    }

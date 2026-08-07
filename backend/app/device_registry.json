@@ -1,224 +1,4 @@
 {
-    "NVR-5_26": {
-        "camera": "COLD ROOM",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.53",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_19": {
-        "camera": "Camera 01",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.47",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_21": {
-        "camera": "Camera 01",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.48",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_22": {
-        "camera": "IN    V4",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.49",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_23": {
-        "camera": "IN    W1",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.50",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_24": {
-        "camera": "IN   R8",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.51",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-5_25": {
-        "camera": "IN   O8",
-        "nvr": "NVR-5",
-        "ip": "192.168.1.52",
-        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
-        "mac": "bc:29:78:4e:f5:66",
-        "model": "DS-7632NXI-K2",
-        "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:02:19 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
-    },
-    "NVR-1_1": {
-        "camera": "QC TABLE  5",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.78",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_2": {
-        "camera": "QC TABLE 13",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.79",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_3": {
-        "camera": "QC TABLE 2",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.80",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_4": {
-        "camera": "QC TABLE 14",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.81",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_5": {
-        "camera": "QC TABLE 1",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.82",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_6": {
-        "camera": "QC TABLE 4",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.83",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_7": {
-        "camera": "QCTABLE 9",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.84",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_8": {
-        "camera": "QC TABLE 3",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.85",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_9": {
-        "camera": "QC TABLE 17",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.86",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_10": {
-        "camera": "QC TABLE 8",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.87",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_11": {
-        "camera": "AMAZON TABLE 15",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.88",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_12": {
-        "camera": "QC TABLE 11",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.89",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
-    "NVR-1_13": {
-        "camera": "QC TABLE 10",
-        "nvr": "NVR-1",
-        "ip": "192.168.1.90",
-        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
-        "mac": "bc:29:78:6a:17:46",
-        "model": "DS-7616NXI-K2",
-        "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
-    },
     "NVR-1_14": {
         "camera": "QC TABLE 12",
         "nvr": "NVR-1",
@@ -227,8 +7,8 @@
         "mac": "bc:29:78:6a:17:46",
         "model": "DS-7616NXI-K2",
         "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:17 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
     },
     "NVR-1_15": {
         "camera": "QC TABLE 7",
@@ -238,8 +18,8 @@
         "mac": "bc:29:78:6a:17:46",
         "model": "DS-7616NXI-K2",
         "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:17 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
     },
     "NVR-1_16": {
         "camera": "QC TABLE 6",
@@ -249,8 +29,8 @@
         "mac": "bc:29:78:6a:17:46",
         "model": "DS-7616NXI-K2",
         "firmware": "V4.84.035",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:17 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
     },
     "NVR-2_1": {
         "camera": "SRN 1",
@@ -260,8 +40,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_2": {
         "camera": "SRN   2",
@@ -271,8 +51,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_3": {
         "camera": "DOCK YARD 1",
@@ -282,8 +62,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_4": {
         "camera": "QA AREA",
@@ -293,8 +73,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_5": {
         "camera": "NVR 10 Cam 121   QC&PACKING",
@@ -304,8 +84,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_6": {
         "camera": "MAIN  ENTRY GATE",
@@ -315,8 +95,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_7": {
         "camera": "DOCK YARD 2",
@@ -326,8 +106,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_8": {
         "camera": "INBOUND ENTRY GATE",
@@ -337,8 +117,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_9": {
         "camera": "Camera 01",
@@ -348,8 +128,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_10": {
         "camera": "SERVER ROOM",
@@ -359,8 +139,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_11": {
         "camera": "OUTBOUND 2",
@@ -370,8 +150,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_12": {
         "camera": "SRN   4",
@@ -381,8 +161,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_13": {
         "camera": "OUTBOUND GALLERY",
@@ -392,8 +172,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:21 PM"
+        "first_seen": "07-08-2026 06:57:18 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_14": {
         "camera": "SECURITY DESK 1",
@@ -403,8 +183,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_15": {
         "camera": "SRN   7",
@@ -414,8 +194,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_16": {
         "camera": "LOGISTICK",
@@ -425,8 +205,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_17": {
         "camera": "SRN  5",
@@ -436,8 +216,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_18": {
         "camera": "SRN  6",
@@ -447,8 +227,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_19": {
         "camera": "CAFFETERIA 1",
@@ -458,8 +238,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_20": {
         "camera": "INBOUND LOBBY",
@@ -469,8 +249,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_21": {
         "camera": "LOGISTICk",
@@ -480,8 +260,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_22": {
         "camera": "SRN",
@@ -491,8 +271,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_23": {
         "camera": "PACK 1",
@@ -502,8 +282,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_24": {
         "camera": "GALLERY  1",
@@ -513,8 +293,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_25": {
         "camera": "OUTDOOR  1",
@@ -524,8 +304,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_26": {
         "camera": "LOGISTICK",
@@ -535,8 +315,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_27": {
         "camera": "SECURITY DESK 2",
@@ -546,8 +326,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_28": {
         "camera": "CAFFETERIA  2",
@@ -557,8 +337,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-2_29": {
         "camera": "SRN   8",
@@ -568,8 +348,8 @@
         "mac": "bc:29:78:4e:f5:62",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_1": {
         "camera": "QC TABLE 1",
@@ -579,8 +359,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_2": {
         "camera": "PROCESSING 1",
@@ -590,8 +370,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_3": {
         "camera": "QC TABLE 7",
@@ -601,8 +381,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_4": {
         "camera": "Camera 01",
@@ -612,8 +392,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_5": {
         "camera": "B2B GALLERY",
@@ -623,8 +403,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:19 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_6": {
         "camera": "PROCESSNG 2",
@@ -634,8 +414,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_7": {
         "camera": "RTO",
@@ -645,8 +425,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_8": {
         "camera": "QC TABLE 5",
@@ -656,8 +436,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_9": {
         "camera": "QC TABLE  20",
@@ -667,8 +447,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_10": {
         "camera": "Camera 01",
@@ -678,8 +458,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_11": {
         "camera": "PACK 2",
@@ -689,8 +469,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_12": {
         "camera": "DISPATCH",
@@ -700,8 +480,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_13": {
         "camera": "QC TABLE 9",
@@ -711,8 +491,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_14": {
         "camera": "QC TABLE 8",
@@ -722,8 +502,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_15": {
         "camera": "QC TABLE 2",
@@ -733,8 +513,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-3_16": {
         "camera": "Camera 01",
@@ -744,8 +524,8 @@
         "mac": "24:28:fd:36:08:38",
         "model": "DS-7616NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:58 PM"
     },
     "NVR-4_1": {
         "camera": "IN    R5",
@@ -755,8 +535,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_2": {
         "camera": "Camera 01",
@@ -766,8 +546,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_3": {
         "camera": "BULK GALLERY",
@@ -777,8 +557,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:20 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_4": {
         "camera": "IN   Q1",
@@ -788,8 +568,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_5": {
         "camera": "IPCamera 04",
@@ -799,8 +579,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_6": {
         "camera": "AMAZON TABLE",
@@ -810,8 +590,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_7": {
         "camera": "IN    V1",
@@ -821,8 +601,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-4_8": {
         "camera": "PR FRONT GATE",
@@ -832,8 +612,8 @@
         "mac": "ac:b9:2f:35:d8:ca",
         "model": "DS-7608NI-Q2",
         "firmware": "V4.32.110",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_1": {
         "camera": "B2C LOBBY",
@@ -843,8 +623,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_2": {
         "camera": "QR GENERATE AREA",
@@ -854,8 +634,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_3": {
         "camera": "PRD AREA",
@@ -865,8 +645,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_4": {
         "camera": "PO OFFICE",
@@ -876,8 +656,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_5": {
         "camera": "DOCK YARD 3",
@@ -887,8 +667,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_6": {
         "camera": "PV AREA",
@@ -898,8 +678,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_8": {
         "camera": "COLD ROOM",
@@ -909,8 +689,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:21 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_9": {
         "camera": "BAR CODE",
@@ -920,8 +700,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_11": {
         "camera": "Camera 01",
@@ -931,8 +711,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_12": {
         "camera": "IN    V3",
@@ -942,8 +722,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:22 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_13": {
         "camera": "Camera 01",
@@ -953,8 +733,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_14": {
         "camera": "Camera 01",
@@ -964,8 +744,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_15": {
         "camera": "Camera 01",
@@ -975,8 +755,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_16": {
         "camera": "IN    X1",
@@ -986,8 +766,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_17": {
         "camera": "IN    Q5",
@@ -997,8 +777,8 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
     },
     "NVR-5_18": {
         "camera": "IN   U1",
@@ -1008,7 +788,227 @@
         "mac": "bc:29:78:4e:f5:66",
         "model": "DS-7632NXI-K2",
         "firmware": "V4.83.006",
-        "first_seen": "06-08-2026 07:03:17 PM",
-        "last_seen": "06-08-2026 07:14:23 PM"
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_19": {
+        "camera": "Camera 01",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.47",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_21": {
+        "camera": "Camera 01",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.48",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_22": {
+        "camera": "IN    V4",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.49",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_23": {
+        "camera": "IN    W1",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.50",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_24": {
+        "camera": "IN   R8",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.51",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_25": {
+        "camera": "IN   O8",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.52",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-5_26": {
+        "camera": "COLD ROOM",
+        "nvr": "NVR-5",
+        "ip": "192.168.1.53",
+        "serial": "DS-7632NXI-K21620241022CCRRFR4057048WCVU",
+        "mac": "bc:29:78:4e:f5:66",
+        "model": "DS-7632NXI-K2",
+        "firmware": "V4.83.006",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:59 PM"
+    },
+    "NVR-1_1": {
+        "camera": "QC TABLE  5",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.78",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_2": {
+        "camera": "QC TABLE 13",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.79",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_3": {
+        "camera": "QC TABLE 2",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.80",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_4": {
+        "camera": "QC TABLE 14",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.81",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_5": {
+        "camera": "QC TABLE 1",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.82",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_6": {
+        "camera": "QC TABLE 4",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.83",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_7": {
+        "camera": "QCTABLE 9",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.84",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_8": {
+        "camera": "QC TABLE 3",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.85",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:22 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_9": {
+        "camera": "QC TABLE 17",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.86",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:23 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_10": {
+        "camera": "QC TABLE 8",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.87",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:23 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_11": {
+        "camera": "AMAZON TABLE 15",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.88",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:23 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_12": {
+        "camera": "QC TABLE 11",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.89",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:23 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
+    },
+    "NVR-1_13": {
+        "camera": "QC TABLE 10",
+        "nvr": "NVR-1",
+        "ip": "192.168.1.90",
+        "serial": "DS-7616NXI-K21620241213CCRRFT9875111WCVU",
+        "mac": "bc:29:78:6a:17:46",
+        "model": "DS-7616NXI-K2",
+        "firmware": "V4.84.035",
+        "first_seen": "07-08-2026 06:57:23 PM",
+        "last_seen": "07-08-2026 07:51:57 PM"
     }
 }
